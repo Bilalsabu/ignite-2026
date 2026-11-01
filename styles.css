@@ -517,11 +517,13 @@ section, footer, header, main {
 .bento-card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 16px;
-  padding: 14px 16px;
+  border-radius: 18px;
+  padding: 16px 14px;
   backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   justify-content: center;
   gap: 8px;
   transition: transform 0.2s ease, border-color 0.2s ease;
@@ -533,32 +535,36 @@ section, footer, header, main {
 }
 
 .bento-icon-wrap {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: rgba(255, 107, 43, 0.15);
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 107, 43, 0.16);
   color: #ff9f43;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2px;
 }
 
 .bento-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
 }
 
 .bento-label {
-  font-size: 0.7rem;
+  font-size: 0.74rem;
   letter-spacing: 0.8px;
   font-weight: 700;
-  color: #94a3b8;
+  color: #cbd5e1;
   text-transform: uppercase;
 }
 
 .bento-value {
   font-family: var(--font-main);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.2;
@@ -2147,70 +2153,88 @@ section {
   }
 
   .brand-title-row {
-    font-size: clamp(1.85rem, 7.5vw, 2.45rem);
-    gap: 2px;
+    font-size: clamp(2.55rem, 10vw, 3.4rem);
+    gap: 4px;
     justify-content: center;
   }
 
   .brand-flame-bulb {
-    width: 36px;
-    height: 44px;
+    width: 52px;
+    height: 64px;
   }
 
   .brand-script-text {
-    font-size: clamp(1.15rem, 4.4vw, 1.45rem);
+    font-size: clamp(1.35rem, 5.4vw, 1.75rem);
   }
 
   .spark-left,
   .spark-right {
-    width: 16px;
+    width: 18px;
   }
 
   .hero-subtext {
-    font-size: 0.86rem;
-    line-height: 1.5;
-    margin-bottom: 18px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
     padding: 0 4px;
   }
 
-  /* 4-Square Bento 2x2 Layout on Mobile */
+  /* 4-Square Bento 2x2 Layout on Mobile - Icon Above, Text Below, Bigger Text */
   .hero-bento-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 square bits per row */
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 26px;
     width: 100%;
   }
 
   .bento-card {
-    padding: 10px 10px;
-    border-radius: 12px;
-    min-height: 78px;
-    aspect-ratio: 1.3 / 1;
+    padding: 16px 10px;
+    border-radius: 18px;
+    min-height: 112px;
+    aspect-ratio: 1.15 / 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     justify-content: center;
-    gap: 4px;
+    gap: 7px;
   }
 
   .bento-icon-wrap {
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: rgba(255, 107, 43, 0.2);
+    margin-bottom: 2px;
   }
 
   .bento-icon-wrap svg {
-    width: 16px;
-    height: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .bento-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
   }
 
   .bento-label {
-    font-size: 0.62rem;
-    letter-spacing: 0.5px;
+    font-size: 0.74rem;
+    letter-spacing: 0.7px;
+    font-weight: 700;
+    color: #cbd5e1;
+    text-transform: uppercase;
   }
 
   .bento-value {
-    font-size: 0.88rem;
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
   }
 
   .hero-cta-group {
@@ -2222,22 +2246,16 @@ section {
   .hero-cta-group .btn {
     width: 100%;
     padding: 12px 18px;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
   }
 
-  .artwork-wrapper {
-    overflow: hidden;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+  /* Remove hero image artwork on phone screens */
+  .hero-right {
+    display: none !important;
   }
 
   .floating-badge {
     display: none; /* remove floating badges to eliminate horizontal overflow on mobile */
-  }
-
-  .hero-image-card {
-    border-radius: 18px;
   }
 
   .stats-grid {
@@ -2498,44 +2516,46 @@ section {
   }
 
   .brand-title-row {
-    font-size: clamp(1.6rem, 7vw, 2.1rem);
+    font-size: clamp(2.15rem, 8.8vw, 2.75rem);
+    gap: 3px;
   }
 
   .brand-flame-bulb {
-    width: 30px;
-    height: 38px;
+    width: 42px;
+    height: 50px;
   }
 
   .brand-script-text {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 
   .hero-bento-grid {
-    gap: 6px;
+    gap: 8px;
   }
 
   .bento-card {
-    padding: 8px 6px;
-    min-height: 72px;
-    border-radius: 10px;
+    padding: 12px 8px;
+    min-height: 98px;
+    border-radius: 14px;
+    gap: 4px;
   }
 
   .bento-icon-wrap {
-    width: 26px;
-    height: 26px;
+    width: 34px;
+    height: 34px;
   }
 
   .bento-icon-wrap svg {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
   }
 
   .bento-value {
-    font-size: 0.8rem;
+    font-size: 0.98rem;
   }
 
   .bento-label {
-    font-size: 0.58rem;
+    font-size: 0.66rem;
   }
 
   .bento-bit {
