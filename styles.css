@@ -29,6 +29,11 @@
   --expo-green-text: #059669;
   --expo-green-dark: #047857;
 
+  --reel-purple-bg: #f5f0ff;
+  --reel-purple-border: #d8b4fe;
+  --reel-purple-text: #7e22ce;
+  --reel-purple-dark: #581c87;
+
   /* Prize Colors */
   --prize-gold-bg: #fef9c3;
   --prize-gold-border: #fde047;
@@ -117,60 +122,13 @@ button {
 }
 
 /* --------------------------------------------------
-   Announcement Bar
-   -------------------------------------------------- */
-.announcement-bar {
-  background: linear-gradient(90deg, #091224 0%, #172a4d 50%, #091224 100%);
-  color: #f8fafc;
-  font-size: 0.86rem;
-  padding: 9px 0;
-  border-bottom: 1px solid rgba(255, 107, 43, 0.3);
-  text-align: center;
-  position: relative;
-  z-index: 60;
-}
-
-.announcement-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.badge-pulse {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ff6b2b;
-  box-shadow: 0 0 0 0 rgba(255, 107, 43, 0.7);
-  animation: pulse 1.8s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 107, 43, 0.8); }
-  70% { transform: scale(1); box-shadow: 0 0 0 7px rgba(255, 107, 43, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 107, 43, 0); }
-}
-
-.announcement-link {
-  color: #ff9f43;
-  font-weight: 600;
-  margin-left: 6px;
-}
-.announcement-link:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* --------------------------------------------------
    Header & Navigation
    -------------------------------------------------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.85);
@@ -195,51 +153,24 @@ button {
   gap: 12px;
 }
 
-.college-logo-box {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.nav-ignite-logo {
+  height: 48px;
+  max-width: 220px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
 }
 
-.tkm-crest {
-  width: 52px;
-  height: 52px;
-  flex-shrink: 0;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
-  transition: var(--transition-fast);
+.brand-group:hover .nav-ignite-logo {
+  transform: scale(1.04);
 }
 
-.brand-group:hover .tkm-crest {
-  transform: rotate(5deg) scale(1.04);
-}
-
-.college-text-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.college-acronym {
-  font-family: var(--font-main);
-  font-size: 1.45rem;
-  font-weight: 900;
-  color: var(--primary-navy);
-  line-height: 1;
-  letter-spacing: -0.5px;
-}
-
-.college-full {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: #334155;
-  letter-spacing: 0.8px;
-  line-height: 1.1;
-  margin-top: 2px;
-}
-
-.college-sub {
-  font-size: 0.62rem;
-  color: var(--text-muted);
-  letter-spacing: 0.5px;
+.footer-ignite-logo {
+  height: 54px;
+  max-width: 260px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 12px;
 }
 
 /* Nav Menu */
@@ -555,22 +486,41 @@ button {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px;
   margin-bottom: 34px;
 }
 
 .meta-pill {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(8px);
   padding: 8px 16px;
   border-radius: 9999px;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #f1f5f9;
   font-weight: 500;
+}
+
+.meta-pill.highlight-pill {
+  border-color: rgba(255, 107, 43, 0.5);
+  background: rgba(255, 107, 43, 0.15);
+  color: #ffedd5;
+}
+
+.meta-pill.green-pill {
+  border-color: rgba(34, 197, 94, 0.5);
+  background: rgba(34, 197, 94, 0.15);
+  color: #bbf7d0;
+  font-weight: 700;
+}
+
+.meta-pill.deadline-pill {
+  border-color: rgba(251, 191, 36, 0.5);
+  background: rgba(251, 191, 36, 0.15);
+  color: #fef08a;
 }
 
 .meta-icon {
@@ -931,57 +881,27 @@ section {
 }
 
 /* --------------------------------------------------
-   Events Section (Poster Replica Cards)
+   Events Section (3 Event Cards Grid)
    -------------------------------------------------- */
 .events-section {
   background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
 }
 
 .section-header-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   margin-bottom: 48px;
 }
 
-.events-slider-controls {
-  display: flex;
-  gap: 10px;
-}
-
-.arrow-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1.5px solid #cbd5e1;
-  background: #ffffff;
-  color: #334155;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition-fast);
-}
-
-.arrow-btn:hover,
-.arrow-btn.active {
-  background: var(--accent-orange);
-  border-color: var(--accent-orange);
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(255, 107, 43, 0.35);
-}
-
-.events-grid {
+.events-grid-three {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
 /* Event Card Style - Exact visual from poster */
 .event-card {
   position: relative;
   border-radius: 28px;
-  padding: 44px 38px;
+  padding: 38px 30px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: var(--transition-smooth);
@@ -997,10 +917,10 @@ section {
 /* Watermarks */
 .card-num-watermark {
   position: absolute;
-  top: 24px;
-  left: 32px;
+  top: 20px;
+  left: 26px;
   font-family: var(--font-main);
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 900;
   line-height: 1;
   opacity: 0.15;
@@ -1010,19 +930,18 @@ section {
 
 .doodle-watermark {
   position: absolute;
-  font-size: 3rem;
+  font-size: 2.6rem;
   opacity: 0.08;
   pointer-events: none;
   user-select: none;
 }
 
-.doodle-atom { top: 30px; right: 40px; }
-.doodle-bulb { bottom: 80px; left: 30px; font-size: 2.2rem; }
-.doodle-math { bottom: 20px; right: 30px; font-family: serif; font-size: 1.8rem; }
-
-.doodle-gear { top: 30px; right: 40px; }
-.doodle-rocket { bottom: 80px; left: 30px; font-size: 2.2rem; }
-.doodle-circuit { bottom: 20px; right: 30px; }
+.doodle-atom { top: 25px; right: 30px; }
+.doodle-bulb { bottom: 80px; left: 24px; font-size: 2rem; }
+.doodle-gear { top: 25px; right: 30px; }
+.doodle-rocket { bottom: 80px; left: 24px; font-size: 2rem; }
+.doodle-camera { top: 25px; right: 30px; }
+.doodle-sparkle { bottom: 80px; left: 24px; font-size: 2rem; }
 
 /* Quiz Whiz Card Theme (Sky Blue Gradient) */
 .event-quiz-card {
@@ -1042,18 +961,27 @@ section {
   color: var(--expo-green-dark);
 }
 
+/* Reel Making Card Theme (Purple Gradient) */
+.event-reel-card {
+  background: linear-gradient(145deg, #faf5ff 0%, #f3e8ff 100%);
+  border: 1.5px solid var(--reel-purple-border);
+}
+.event-reel-card .card-num-watermark {
+  color: var(--reel-purple-dark);
+}
+
 .card-header-icon-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 2;
 }
 
 .svg-event-icon {
-  width: 90px;
-  height: 90px;
+  width: 82px;
+  height: 82px;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
   transition: transform 0.3s ease;
 }
@@ -1064,7 +992,7 @@ section {
 
 .event-card-titles {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 2;
 }
@@ -1073,45 +1001,48 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 4px;
 }
 
 .event-card-name {
   font-family: var(--font-main);
-  font-size: 2.1rem;
+  font-size: 1.75rem;
   font-weight: 900;
   color: var(--primary-navy);
   letter-spacing: -0.5px;
 }
 
-.highlight-year {
-  color: var(--accent-orange);
-}
-
 .version-badge {
   background: var(--primary-navy);
   color: #ffffff;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 800;
   padding: 3px 8px;
   border-radius: 6px;
   letter-spacing: 0.5px;
 }
 
+.version-badge.expo-badge {
+  background: #047857;
+}
+
+.version-badge.reel-badge {
+  background: #7e22ce;
+}
+
 .event-card-type {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #334155;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .event-card-catchphrase {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: #475569;
   font-weight: 500;
   line-height: 1.5;
-  max-width: 420px;
   margin: 0 auto;
 }
 
@@ -1119,18 +1050,18 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 32px;
+  gap: 7px;
+  margin-bottom: 26px;
   position: relative;
   z-index: 2;
 }
 
 .pill-badge {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   border: 1px solid rgba(0, 0, 0, 0.06);
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 9999px;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: #1e293b;
   box-shadow: var(--shadow-sm);
@@ -1138,7 +1069,7 @@ section {
 
 .event-card-actions {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   margin-top: auto;
   position: relative;
   z-index: 2;
@@ -1148,8 +1079,8 @@ section {
   flex: 1;
   background: var(--primary-navy);
   color: #ffffff;
-  font-size: 0.92rem;
-  padding: 12px 18px;
+  font-size: 0.88rem;
+  padding: 11px 14px;
   border-radius: 12px;
   font-weight: 700;
   display: inline-flex;
@@ -1168,8 +1099,8 @@ section {
   flex: 1.3;
   background: linear-gradient(135deg, #ff7b25 0%, #ff5200 100%);
   color: #ffffff;
-  font-size: 0.92rem;
-  padding: 12px 18px;
+  font-size: 0.88rem;
+  padding: 11px 14px;
   border-radius: 12px;
   font-weight: 700;
   display: inline-flex;
@@ -1185,221 +1116,7 @@ section {
 }
 
 /* --------------------------------------------------
-   Registration Hub & Registration Cards
-   -------------------------------------------------- */
-.registration-hub-section {
-  background: #ffffff;
-  border-top: 1px solid var(--border-light);
-  border-bottom: 1px solid var(--border-light);
-}
-
-.hub-header {
-  margin-bottom: 48px;
-}
-
-.reg-cards-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-bottom: 40px;
-}
-
-.reg-flow-card {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 36px 32px;
-  box-shadow: var(--shadow-md);
-  border: 2px solid transparent;
-  position: relative;
-  transition: var(--transition-smooth);
-}
-
-.reg-flow-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-}
-
-.reg-quiz-theme {
-  border-color: #bae6fd;
-  background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 40%);
-}
-.reg-quiz-theme:hover {
-  border-color: var(--accent-orange);
-}
-
-.reg-expo-theme {
-  border-color: #bbf7d0;
-  background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 40%);
-}
-.reg-expo-theme:hover {
-  border-color: var(--accent-orange);
-}
-
-.reg-card-badge {
-  position: absolute;
-  top: 24px;
-  right: 28px;
-  background: #0f2647;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 800;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  letter-spacing: 0.5px;
-}
-
-.reg-card-badge.expo-badge {
-  background: #047857;
-}
-
-.reg-card-icon-banner {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.reg-avatar {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  flex-shrink: 0;
-}
-
-.quiz-avatar {
-  background: #e0f2fe;
-}
-.expo-avatar {
-  background: #dcfce7;
-}
-
-.reg-card-icon-banner h3 {
-  font-family: var(--font-main);
-  font-size: 1.45rem;
-  font-weight: 800;
-  color: var(--primary-navy);
-}
-
-.reg-card-icon-banner p {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-}
-
-.reg-card-specs {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 28px;
-  padding: 18px;
-  background: #f8fafc;
-  border-radius: 16px;
-  border: 1px solid var(--border-light);
-}
-
-.spec-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.88rem;
-}
-
-.spec-label {
-  color: #64748b;
-  font-weight: 500;
-}
-
-.spec-val {
-  font-weight: 700;
-  color: #1e293b;
-}
-
-.spec-val.highlight-free {
-  color: #059669;
-}
-
-.btn-primary-reg {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--primary-navy);
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 14px 24px;
-  border-radius: 14px;
-  transition: var(--transition-fast);
-}
-
-.btn-primary-reg:hover {
-  background: #173b70;
-  box-shadow: 0 6px 18px rgba(15, 38, 71, 0.2);
-}
-
-.btn-primary-reg.btn-expo {
-  background: #047857;
-}
-.btn-primary-reg.btn-expo:hover {
-  background: #065f46;
-}
-
-/* Fast Lookup Bar */
-.reg-lookup-bar {
-  background: #f8fafc;
-  border: 1px dashed #cbd5e1;
-  border-radius: 20px;
-  padding: 24px 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.lookup-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.lookup-text strong {
-  font-size: 1rem;
-  color: var(--primary-navy);
-}
-
-.lookup-text span {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-}
-
-.lookup-form {
-  display: flex;
-  gap: 10px;
-  flex: 1;
-  max-width: 480px;
-}
-
-.lookup-form input {
-  flex: 1;
-  padding: 10px 16px;
-  border-radius: 10px;
-  border: 1.5px solid #cbd5e1;
-  font-family: inherit;
-  font-size: 0.9rem;
-  outline: none;
-  transition: var(--transition-fast);
-}
-
-.lookup-form input:focus {
-  border-color: var(--primary-navy);
-  box-shadow: 0 0 0 3px rgba(15, 38, 71, 0.1);
-}
-
-/* --------------------------------------------------
-   Prizes Section (Mockup 4 Card Palette)
+   Prizes Section
    -------------------------------------------------- */
 .prizes-section {
   background-color: #ffffff;
@@ -1476,7 +1193,6 @@ section {
   font-weight: 600;
 }
 
-/* Color schemes matching mockup */
 .prize-card-gold {
   background: linear-gradient(180deg, #fef08a 0%, #fde047 100%);
   border-color: #eab308;
@@ -1505,27 +1221,29 @@ section {
 }
 .prize-card-green .prize-amount { color: #166534; }
 
-/* Event Details Quick Info Bar (Mockup Replica) */
+/* Event Details Quick Info Bar */
 .event-details-card-bar {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
-  padding: 24px 40px;
+  padding: 24px 32px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .detail-block {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .detail-icon {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: #ffffff;
   box-shadow: var(--shadow-sm);
@@ -1541,7 +1259,7 @@ section {
 }
 
 .detail-label {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: #64748b;
   font-weight: 600;
   text-transform: uppercase;
@@ -1550,7 +1268,7 @@ section {
 
 .detail-value {
   font-family: var(--font-main);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--primary-navy);
 }
@@ -1562,126 +1280,7 @@ section {
 }
 
 /* --------------------------------------------------
-   Schedule Timeline Section
-   -------------------------------------------------- */
-.schedule-section {
-  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-}
-
-.timeline-container {
-  max-width: 820px;
-  margin: 48px auto 0 auto;
-  position: relative;
-}
-
-.timeline-container::before {
-  content: '';
-  position: absolute;
-  top: 15px;
-  bottom: 15px;
-  left: 200px;
-  width: 2px;
-  background: #e2e8f0;
-}
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 180px 42px 1fr;
-  align-items: flex-start;
-  margin-bottom: 32px;
-  position: relative;
-}
-
-.timeline-time {
-  text-align: right;
-  font-family: var(--font-main);
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--accent-orange);
-  padding-top: 2px;
-}
-
-.timeline-dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 3.5px solid var(--primary-navy);
-  margin: 4px auto 0 auto;
-  z-index: 2;
-  transition: var(--transition-fast);
-}
-
-.timeline-item:hover .timeline-dot,
-.timeline-item.highlight-item .timeline-dot {
-  background: var(--accent-orange);
-  border-color: #ffffff;
-  box-shadow: 0 0 0 4px rgba(255, 107, 43, 0.3);
-  transform: scale(1.2);
-}
-
-.timeline-content {
-  background: #ffffff;
-  padding: 18px 24px;
-  border-radius: 16px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-light);
-  transition: var(--transition-fast);
-}
-
-.timeline-content:hover {
-  box-shadow: var(--shadow-md);
-  border-color: #cbd5e1;
-}
-
-.timeline-content h4 {
-  font-family: var(--font-main);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--primary-navy);
-  margin-bottom: 6px;
-}
-
-.timeline-content p {
-  font-size: 0.9rem;
-  color: #64748b;
-  line-height: 1.5;
-}
-
-.timeline-subevents {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
-
-.subevent-tag {
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 6px;
-}
-
-.subevent-tag.blue {
-  background: var(--quiz-blue-bg);
-  color: var(--quiz-blue-dark);
-}
-
-.subevent-tag.green {
-  background: var(--expo-green-bg);
-  color: var(--expo-green-dark);
-}
-
-.timeline-item.highlight-item .timeline-content {
-  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-  border-color: #fde68a;
-}
-.timeline-item.highlight-item .timeline-content h4 {
-  color: #92400e;
-}
-
-/* --------------------------------------------------
-   Why Join Section (Mockup Replica)
+   Why Join Section
    -------------------------------------------------- */
 .why-join-section {
   background: radial-gradient(circle at 50% 30%, #0d172e 0%, #060a14 100%);
@@ -1743,7 +1342,7 @@ section {
   line-height: 1.5;
 }
 
-/* Call to Action Banner (Mockup Replica) */
+/* Call to Action Banner */
 .cta-banner-wrapper {
   margin-top: 30px;
 }
@@ -1836,7 +1435,7 @@ section {
 }
 
 /* --------------------------------------------------
-   Contact Section
+   Contact & Coordinators Section
    -------------------------------------------------- */
 .contact-section {
   background: #ffffff;
@@ -1844,40 +1443,48 @@ section {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 56px;
-  align-items: center;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: flex-start;
 }
 
 .contact-cards-stack {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
-.coordinator-card {
+/* Head of Department Card */
+.coordinator-card.hod-card {
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 18px 22px;
-  border-radius: 16px;
-  background: #f8fafc;
-  border: 1px solid var(--border-light);
+  padding: 20px 24px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1.5px solid #fed7aa;
   box-shadow: var(--shadow-sm);
-  transition: var(--transition-fast);
 }
 
-.coordinator-card:hover {
-  transform: translateX(4px);
-  border-color: #cbd5e1;
+.coord-role-badge {
+  display: inline-block;
+  background: #ea580c;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
 }
 
 .coord-avatar {
-  font-size: 2rem;
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
+  font-size: 2.2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
   background: #ffffff;
   display: flex;
   align-items: center;
@@ -1892,22 +1499,89 @@ section {
 }
 
 .coord-details strong {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   color: var(--primary-navy);
 }
 
 .coord-dept {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: #64748b;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
-.coord-phone {
+.coord-phone-link {
+  font-size: 0.92rem;
+  color: #c2410c;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.coord-phone-link:hover {
+  text-decoration: underline;
+  color: #9a3412;
+}
+
+/* Faculty Coordinators Grid */
+.faculty-group-title {
+  margin-top: 10px;
+}
+.faculty-group-title h4 {
+  font-family: var(--font-main);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  letter-spacing: 0.3px;
+}
+
+.faculty-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.faculty-mini-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #f8fafc;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  transition: var(--transition-fast);
+}
+
+.faculty-mini-card:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.mini-avatar {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  flex-shrink: 0;
+}
+
+.faculty-mini-card strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--primary-navy);
+}
+
+.faculty-mini-card .coord-phone-link {
   font-size: 0.85rem;
-  color: #1e293b;
-  font-weight: 600;
+  color: #ea580c;
 }
 
+/* Map Card */
 .map-card-box {
   background: #ffffff;
   border-radius: 24px;
@@ -1987,7 +1661,7 @@ section {
 }
 
 /* --------------------------------------------------
-   Site Footer (Mockup Exact Replica)
+   Site Footer
    -------------------------------------------------- */
 .site-footer {
   background: #f4f6fa;
@@ -2007,27 +1681,7 @@ section {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 16px;
-}
-
-.footer-crest {
-  width: 48px;
-  height: 48px;
-}
-
-.footer-brand-title {
-  font-family: var(--font-main);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--primary-navy);
-  line-height: 1;
-}
-
-.footer-brand-sub {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #475569;
-  letter-spacing: 0.5px;
+  margin-bottom: 12px;
 }
 
 .footer-address {
@@ -2177,10 +1831,6 @@ section {
   max-width: 760px;
 }
 
-.modal-xl {
-  max-width: 980px;
-}
-
 .modal-close-btn {
   position: absolute;
   top: 20px;
@@ -2204,513 +1854,6 @@ section {
   transform: rotate(90deg);
 }
 
-/* --------------------------------------------------
-   Registration Flow Modal
-   -------------------------------------------------- */
-.reg-modal-wrapper {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  min-height: 600px;
-}
-
-.reg-sidebar {
-  background: linear-gradient(180deg, #0f2647 0%, #09172e 100%);
-  color: #ffffff;
-  padding: 38px 28px;
-  border-top-left-radius: 28px;
-  border-bottom-left-radius: 28px;
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar-fest-title {
-  margin-bottom: 24px;
-}
-
-.sidebar-tag {
-  font-size: 0.72rem;
-  letter-spacing: 1.5px;
-  color: #ff9f43;
-  font-weight: 800;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.sidebar-fest-title h3 {
-  font-family: var(--font-main);
-  font-size: 1.55rem;
-  font-weight: 800;
-}
-
-.event-badge-highlight {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  padding: 14px 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.sidebar-icon {
-  font-size: 1.8rem;
-}
-
-.badge-title {
-  display: block;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.badge-sub {
-  font-size: 0.78rem;
-  color: #cbd5e1;
-}
-
-.prizes-reminder-box {
-  background: rgba(245, 158, 11, 0.15);
-  border: 1px dashed rgba(245, 158, 11, 0.4);
-  padding: 14px 16px;
-  border-radius: 14px;
-  margin-bottom: 30px;
-}
-
-.reminder-label {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  color: #fcd34d;
-  font-weight: 700;
-}
-
-.reminder-amount {
-  font-family: var(--font-main);
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.2;
-}
-
-.prizes-reminder-box p {
-  font-size: 0.75rem;
-  color: #fef3c7;
-  margin-top: 4px;
-}
-
-.steps-progress-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: auto;
-}
-
-.step-indicator {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.88rem;
-  color: #94a3b8;
-  font-weight: 600;
-  transition: var(--transition-fast);
-}
-
-.step-circle {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 2px solid #475569;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.step-indicator.active {
-  color: #ffffff;
-}
-
-.step-indicator.active .step-circle {
-  background: var(--accent-orange);
-  border-color: var(--accent-orange);
-  color: #ffffff;
-}
-
-.step-indicator.completed .step-circle {
-  background: #22c55e;
-  border-color: #22c55e;
-  color: #ffffff;
-}
-
-/* Form Content Area */
-.reg-form-pane {
-  padding: 38px 44px;
-  overflow-y: auto;
-}
-
-.form-step-pane {
-  display: none;
-}
-
-.form-step-pane.active {
-  display: block;
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.step-heading {
-  margin-bottom: 28px;
-}
-
-.step-heading h3 {
-  font-family: var(--font-main);
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--primary-navy);
-  margin-bottom: 6px;
-}
-
-.step-heading p {
-  font-size: 0.92rem;
-  color: #64748b;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-bottom: 24px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group.full-col {
-  grid-column: 1 / -1;
-}
-
-.form-group label {
-  font-size: 0.86rem;
-  font-weight: 700;
-  color: #334155;
-}
-
-.required {
-  color: #ef4444;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1.5px solid #cbd5e1;
-  font-family: inherit;
-  font-size: 0.92rem;
-  color: #1e293b;
-  outline: none;
-  transition: var(--transition-fast);
-  background: #f8fafc;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  background: #ffffff;
-  border-color: var(--primary-navy);
-  box-shadow: 0 0 0 3px rgba(15, 38, 71, 0.1);
-}
-
-.member-input-card {
-  background: #f8fafc;
-  border: 1px solid var(--border-light);
-  border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.member-header {
-  margin-bottom: 14px;
-}
-
-.member-tag {
-  background: #e2e8f0;
-  color: #334155;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 4px 10px;
-  border-radius: 6px;
-  letter-spacing: 0.5px;
-}
-
-.notice-info-box {
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  border-radius: 14px;
-  padding: 18px 22px;
-  margin-bottom: 24px;
-  color: #1e3a8a;
-  font-size: 0.9rem;
-}
-
-.notice-info-box ul {
-  padding-left: 20px;
-  margin-top: 8px;
-}
-
-.notice-info-box li {
-  margin-bottom: 4px;
-}
-
-.terms-checkbox-wrap {
-  margin-bottom: 28px;
-}
-
-.custom-checkbox-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  cursor: pointer;
-  user-select: none;
-  font-size: 0.86rem;
-  color: #475569;
-  line-height: 1.5;
-}
-
-.custom-checkbox-container input {
-  display: none;
-}
-
-.checkmark {
-  width: 20px;
-  height: 20px;
-  border-radius: 6px;
-  border: 2px solid #94a3b8;
-  display: inline-block;
-  position: relative;
-  flex-shrink: 0;
-  margin-top: 2px;
-  transition: var(--transition-fast);
-}
-
-.custom-checkbox-container input:checked + .checkmark {
-  background: var(--accent-orange);
-  border-color: var(--accent-orange);
-}
-
-.custom-checkbox-container input:checked + .checkmark::after {
-  content: '';
-  position: absolute;
-  left: 6px;
-  top: 2px;
-  width: 4px;
-  height: 9px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-.form-action-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding-top: 18px;
-  border-top: 1px solid var(--border-light);
-}
-
-.btn-outline-gray {
-  border: 1.5px solid #cbd5e1;
-  color: #475569;
-  font-weight: 700;
-  padding: 12px 22px;
-}
-.btn-outline-gray:hover {
-  background: #f1f5f9;
-  color: #0f172a;
-}
-
-.btn-orange-submit {
-  background: linear-gradient(135deg, #ff7b25 0%, #ff5200 100%);
-  color: #ffffff;
-  padding: 13px 28px;
-  box-shadow: 0 6px 20px rgba(255, 107, 43, 0.4);
-}
-.btn-orange-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 43, 0.55);
-}
-
-/* --------------------------------------------------
-   Digital Ticket / Delegate Admit Card
-   -------------------------------------------------- */
-.digital-ticket-container {
-  background: #ffffff;
-  border-radius: 20px;
-  border: 2px dashed #0f2647;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  margin: 24px 0 30px 0;
-  position: relative;
-}
-
-.ticket-header-strip {
-  background: #0f2647;
-  color: #ffffff;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.ticket-crest-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.tkm-mini-tag {
-  font-size: 0.72rem;
-  letter-spacing: 1px;
-  color: #ff9f43;
-  font-weight: 800;
-}
-
-.fest-mini-tag {
-  font-family: var(--font-main);
-  font-size: 0.95rem;
-  font-weight: 800;
-}
-
-.ticket-id-badge {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-family: monospace;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #fef08a;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.ticket-body-grid {
-  display: grid;
-  grid-template-columns: 1fr 150px;
-  gap: 20px;
-  padding: 24px;
-}
-
-.ticket-event-name {
-  font-family: var(--font-main);
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--accent-orange);
-  margin-bottom: 4px;
-}
-
-.ticket-school-name {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #0f2647;
-}
-
-.ticket-location {
-  font-size: 0.85rem;
-  color: #64748b;
-  margin-bottom: 14px;
-}
-
-.ticket-participants-list {
-  background: #f8fafc;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-size: 0.86rem;
-  color: #334155;
-  margin-bottom: 16px;
-  border: 1px solid #e2e8f0;
-}
-
-.ticket-schedule-row {
-  display: flex;
-  gap: 20px;
-}
-
-.ticket-schedule-row small {
-  display: block;
-  font-size: 0.68rem;
-  color: #64748b;
-  font-weight: 700;
-}
-
-.ticket-schedule-row strong {
-  font-size: 0.9rem;
-  color: #0f2647;
-}
-
-.ticket-qr-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-left: 1px dashed #cbd5e1;
-  padding-left: 20px;
-}
-
-.qr-canvas-box {
-  background: #ffffff;
-  padding: 8px;
-  border-radius: 10px;
-  border: 1px solid #e2e8f0;
-  box-shadow: var(--shadow-sm);
-  margin-bottom: 8px;
-}
-
-.qr-label {
-  font-size: 0.72rem;
-  color: #64748b;
-  font-weight: 600;
-}
-
-.verified-badge {
-  font-size: 0.68rem;
-  font-weight: 800;
-  color: #059669;
-  margin-top: 4px;
-}
-
-.ticket-footer-strip {
-  background: #f1f5f9;
-  padding: 12px 24px;
-  border-top: 1px solid #e2e8f0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  font-size: 0.76rem;
-  color: #475569;
-  font-weight: 600;
-}
-
-.ticket-action-btns {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* --------------------------------------------------
-   Event Details Modal Inner Structure
-   -------------------------------------------------- */
 .modal-details-container {
   padding: 38px 44px;
 }
@@ -2738,6 +1881,9 @@ section {
 }
 .modal-details-icon.expo {
   background: #dcfce7;
+}
+.modal-details-icon.reel {
+  background: #f3e8ff;
 }
 
 .modal-details-title-box h3 {
@@ -2783,41 +1929,6 @@ section {
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid var(--border-light);
-}
-
-/* --------------------------------------------------
-   Toast Notification
-   -------------------------------------------------- */
-.toast-container {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  z-index: 2000;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  pointer-events: none;
-}
-
-.toast {
-  background: #0f2647;
-  color: #ffffff;
-  padding: 14px 22px;
-  border-radius: 14px;
-  font-size: 0.92rem;
-  font-weight: 600;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  pointer-events: auto;
-  border-left: 4px solid var(--accent-orange);
-  animation: slideInToast 0.3s ease;
-}
-
-@keyframes slideInToast {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* --------------------------------------------------
@@ -2869,6 +1980,12 @@ section {
     grid-template-columns: 1fr;
   }
 
+  .events-grid-three {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
   .prize-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2897,14 +2014,6 @@ section {
   .footer-main {
     grid-template-columns: 1fr;
     gap: 32px;
-  }
-
-  .reg-modal-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .reg-sidebar {
-    border-radius: 28px 28px 0 0;
   }
 }
 
@@ -2944,13 +2053,12 @@ section {
     display: flex;
   }
 
-  .events-grid,
-  .reg-cards-grid {
-    grid-template-columns: 1fr;
-  }
-
   .section-title {
     font-size: 2rem;
+  }
+
+  .faculty-cards-grid {
+    grid-template-columns: 1fr;
   }
 
   .event-details-card-bar {
@@ -2961,45 +2069,5 @@ section {
 
   .detail-divider {
     display: none;
-  }
-
-  .timeline-container::before {
-    left: 20px;
-  }
-
-  .timeline-item {
-    grid-template-columns: 40px 1fr;
-    gap: 16px;
-  }
-
-  .timeline-time {
-    grid-column: 2;
-    text-align: left;
-    margin-bottom: 6px;
-  }
-
-  .timeline-dot {
-    grid-column: 1;
-    grid-row: 1 / 3;
-    margin: 6px 0 0 10px;
-  }
-
-  .timeline-content {
-    grid-column: 2;
-  }
-
-  .ticket-body-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ticket-qr-right {
-    border-left: none;
-    border-top: 1px dashed #cbd5e1;
-    padding-left: 0;
-    padding-top: 16px;
-  }
-
-  .form-grid {
-    grid-template-columns: 1fr;
   }
 }

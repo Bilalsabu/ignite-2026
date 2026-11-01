@@ -4,55 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IGNITE 2026 | Department of Applied Science & Engineering | TKM Institute of Technology</title>
-  <meta name="description" content="IGNITE 2026 - Where Science Sparks Engineering. Flagship Science Fest featuring Quiz Whiz v2.0 and Explora 26 Project Expo at TKM Institute of Technology on November 5, 2026. Cash prizes up to ₹ 50,000+!">
+  <meta name="description" content="IGNITE 2026 - Where Science Sparks Engineering. Flagship Science Fest featuring Quiz Whiz, Project Expo, and Reel Making at TKM Institute of Technology on November 24, 2026. No registration fee!">
   
   <!-- Favicon / Logo -->
   <link rel="icon" type="image/png" href="assets/ignite-logo.png">
   
-  <!-- Google Fonts: Outfit, Plus Jakarta Sans, Caveat (for hand-drawn script) -->
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans, Caveat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Canvas Confetti Library for victory/registration animation -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="announcement-bar">
-    <div class="container announcement-content">
-      <span class="badge-pulse"></span>
-      <span>Registrations are now <strong>OPEN</strong> for all High Schools & Higher Secondary Schools!</span>
-      <a href="#register" class="announcement-link">Register your school team &rarr;</a>
-    </div>
-  </div>
-
   <!-- Header / Navigation -->
   <header class="site-header" id="header">
     <div class="container nav-container">
-      <a href="#hero" class="brand-group">
-        <!-- TKM Emblem SVG -->
-        <div class="college-logo-box">
-          <svg class="tkm-crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="46" stroke="#0f2647" stroke-width="4" fill="#f8fafc"/>
-            <circle cx="50" cy="50" r="40" stroke="#ff6b2b" stroke-width="2" stroke-dasharray="4 2"/>
-            <!-- Gear / Wheel -->
-            <path d="M50 20 L54 26 L62 25 L64 32 L71 34 L70 42 L77 46 L74 54 L79 60 L73 66 L75 74 L68 77 L66 84 L58 84 L54 90 L46 90 L42 84 L34 84 L32 77 L25 74 L27 66 L21 60 L26 54 L23 46 L30 42 L29 34 L36 32 L38 25 L46 26 Z" fill="#0f2647" opacity="0.15"/>
-            <!-- Open Book -->
-            <path d="M30 65 Q50 58 50 48 Q50 58 70 65 L70 45 Q50 38 50 30 Q50 38 30 45 Z" fill="#ff6b2b"/>
-            <!-- Torch Flame -->
-            <path d="M50 22 C53 28 58 32 50 42 C42 32 47 28 50 22 Z" fill="#f7971e"/>
-            <circle cx="50" cy="50" r="6" fill="#0f2647"/>
-          </svg>
-          <div class="college-text-details">
-            <span class="college-acronym">TKM</span>
-            <span class="college-full">INSTITUTE OF TECHNOLOGY</span>
-            <span class="college-sub">KOLLAM &bull; ESTD 2002</span>
-          </div>
-        </div>
+      <a href="#hero" class="brand-group" aria-label="IGNITE 2026 Home">
+        <!-- Official IGNITE Logo in Navigation -->
+        <img src="assets/ignite-logo.png" alt="IGNITE 2026" class="nav-ignite-logo">
       </a>
 
       <!-- Desktop Nav Links -->
@@ -61,13 +32,12 @@
         <a href="#about" class="nav-item">About</a>
         <a href="#events" class="nav-item">Events</a>
         <a href="#prizes" class="nav-item">Prizes</a>
-        <a href="#schedule" class="nav-item">Schedule</a>
         <a href="#contact" class="nav-item">Contact</a>
       </nav>
 
       <!-- Nav CTA -->
       <div class="nav-actions">
-        <a href="#register" class="btn btn-navy-pill">
+        <a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" class="btn btn-navy-pill">
           Register Now <span class="arrow">&rarr;</span>
         </a>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
@@ -102,7 +72,6 @@
             <!-- Glowing Flame Lightbulb SVG -->
             <div class="brand-flame-bulb">
               <svg viewBox="0 0 100 130" class="svg-flame-bulb" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Outer glow aura -->
                 <circle cx="50" cy="55" r="45" fill="url(#flameGlow)" opacity="0.4"/>
                 <defs>
                   <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
@@ -115,20 +84,15 @@
                     <stop offset="100%" stop-color="#fbbf24"/>
                   </linearGradient>
                 </defs>
-                <!-- Sparks floating around bulb -->
                 <circle cx="20" cy="25" r="3.5" fill="#f59e0b"/>
                 <circle cx="80" cy="25" r="3.5" fill="#f59e0b"/>
                 <circle cx="50" cy="8" r="4" fill="#fbbf24"/>
                 <circle cx="15" cy="45" r="2.5" fill="#fbbf24"/>
                 <circle cx="85" cy="45" r="2.5" fill="#fbbf24"/>
-                <!-- Flame inside / top of bulb -->
                 <path d="M50 18 C58 30 65 38 60 55 C56 68 44 68 40 55 C35 38 42 30 50 18 Z" fill="url(#fireGrad)"/>
                 <path d="M50 28 C54 36 57 42 54 50 C52 56 46 56 44 50 C41 42 46 36 50 28 Z" fill="#fef08a"/>
-                <!-- Filament loop -->
                 <path d="M46 64 Q50 56 54 64" stroke="#f59e0b" stroke-width="3" fill="none"/>
-                <!-- Bulb glass contour -->
                 <path d="M50 30 C38 30 32 38 32 52 C32 62 38 68 42 75 L42 85 L58 85 L58 75 C62 68 68 62 68 52 C68 38 62 30 50 30 Z" stroke="#ffffff" stroke-width="3.5" fill="none"/>
-                <!-- Screw base -->
                 <rect x="42" y="85" width="16" height="5" rx="2" fill="#e2e8f0"/>
                 <rect x="44" y="90" width="12" height="4" rx="2" fill="#94a3b8"/>
                 <rect x="46" y="94" width="8" height="4" rx="2" fill="#64748b"/>
@@ -147,16 +111,16 @@
         </div>
 
         <p class="hero-subtext">
-          Igniting young scientific minds through a high-octane quiz showdown and groundbreaking project innovations. Step into the arena where curiosity turns into engineering wonders.
+          Igniting young scientific minds through a thrilling quiz competition, groundbreaking project expo, and creative reel making showcase. Step into the arena where curiosity turns into engineering wonders.
         </p>
 
         <!-- Details Badges Row -->
         <div class="event-meta-pills">
-          <div class="meta-pill">
+          <div class="meta-pill highlight-pill">
             <span class="meta-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
             </span>
-            <span class="meta-text">November 5, 2026</span>
+            <span class="meta-text"><strong>Event Date:</strong> November 24, 2026</span>
           </div>
 
           <div class="meta-pill">
@@ -166,20 +130,27 @@
             <span class="meta-text">TKMIT Campus</span>
           </div>
 
-          <div class="meta-pill">
+          <div class="meta-pill green-pill">
             <span class="meta-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
             </span>
-            <span class="meta-text">All Schools are invited</span>
+            <span class="meta-text">No Registration Fee</span>
+          </div>
+
+          <div class="meta-pill deadline-pill">
+            <span class="meta-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </span>
+            <span class="meta-text">Last Date for Registration: <strong>22/11/2026</strong></span>
           </div>
         </div>
 
         <!-- Action Buttons -->
         <div class="hero-cta-group">
           <a href="#events" class="btn btn-orange-glow">
-            Explore Events <span class="arrow">&darr;</span>
+            Explore 3 Events <span class="arrow">&darr;</span>
           </a>
-          <a href="#register" class="btn btn-outline-glow">
+          <a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glow">
             Register Now <span class="arrow">&rarr;</span>
           </a>
         </div>
@@ -209,7 +180,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff793f" stroke-width="2"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2v1"></path><path d="M12 7a5 5 0 0 0-5 5c0 2 1 3 2 4h6c1-1 2-2 2-4a5 5 0 0 0-5-5z"></path></svg>
           </div>
           <div class="stat-info">
-            <span class="stat-count">2</span>
+            <span class="stat-count">3</span>
             <span class="stat-label">Exciting Events</span>
           </div>
         </div>
@@ -259,10 +230,10 @@
           A Celebration of <span class="highlight-orange">Ideas</span>, Innovation & Young Talent
         </h2>
         <p class="about-lead">
-          <strong>IGNITE 2026</strong> is the flagship science and innovation fest organized by the Department of Applied Science and Engineering, <strong>TKM Institute of Technology</strong>. Featuring a thrilling quiz competition and a creative project expo, IGNITE brings together young minds from schools to explore, compete, and showcase their potential.
+          <strong>IGNITE 2026</strong> is the flagship science and innovation fest organized by the Department of Applied Science and Engineering, <strong>TKM Institute of Technology</strong>. Featuring a thrilling quiz competition, an inspiring project expo, and a dynamic reel making contest, IGNITE brings together young minds from schools to explore, compete, and showcase their potential.
         </p>
         <p class="about-body">
-          Designed exclusively for students from High Schools (Class 8-10) and Higher Secondary Schools (+1 & +2), IGNITE provides an inspiring university campus exposure, hands-on scientific learning, peer interaction, and cash accolades for young visionaries.
+          Designed for students from High Schools and Higher Secondary Schools, IGNITE provides inspiring campus exposure, hands-on scientific learning, creative media expression, peer interaction, and cash accolades for young visionaries.
         </p>
 
         <div class="about-highlights-list">
@@ -281,14 +252,14 @@
           <div class="highlight-item">
             <div class="check-circle">&#10003;</div>
             <div>
-              <strong>Zero Registration Fees:</strong> Free entry for qualified school teams with lunch and participation kits included.
+              <strong>Zero Registration Fees:</strong> Free registration for all participating school teams.
             </div>
           </div>
         </div>
 
         <div class="about-btn-wrap">
-          <a href="#events" class="btn btn-navy">
-            Be a Part of IGNITE <span class="arrow">&rarr;</span>
+          <a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" class="btn btn-navy">
+            Register for IGNITE 2026 <span class="arrow">&rarr;</span>
           </a>
         </div>
       </div>
@@ -323,45 +294,32 @@
             <span>EVENTS</span>
           </div>
           <h2 class="section-title">
-            Two Big Events <span class="highlight-orange">in One Fest!</span>
+            Three Big Events <span class="highlight-orange">in One Fest!</span>
           </h2>
           <p class="section-subtitle">
             A perfect platform to showcase knowledge, creativity and innovation.
           </p>
         </div>
-        <div class="events-slider-controls">
-          <button class="arrow-btn" id="prevEventBtn" aria-label="Previous event">&larr;</button>
-          <button class="arrow-btn active" id="nextEventBtn" aria-label="Next event">&rarr;</button>
-        </div>
       </div>
 
-      <!-- Events Cards Grid -->
-      <div class="events-grid">
-        <!-- Event 1: Quiz Whiz v2.0 -->
+      <!-- 3 Events Cards Grid -->
+      <div class="events-grid-three">
+        <!-- Event 1: Quiz Whiz -->
         <div class="event-card event-quiz-card" id="card-quiz">
-          <!-- Science doodle background motifs -->
           <div class="doodle-watermark doodle-atom">&#9883;</div>
           <div class="doodle-watermark doodle-bulb">&#128161;</div>
-          <div class="doodle-watermark doodle-math">&int; &sum; &radic;</div>
-
           <div class="card-num-watermark">01</div>
           
           <div class="card-header-icon-wrap">
             <div class="event-icon-bulb-book">
-              <!-- Animated Lightbulb on Open Book SVG -->
               <svg viewBox="0 0 100 100" class="svg-event-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Sparks -->
                 <line x1="50" y1="12" x2="50" y2="4" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
                 <line x1="68" y1="18" x2="74" y2="12" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
                 <line x1="32" y1="18" x2="26" y2="12" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
-                <!-- Bulb -->
                 <path d="M50 20 C40 20 34 28 34 37 C34 44 38 48 41 53 L41 59 L59 59 L59 53 C62 48 66 44 66 37 C66 28 60 20 50 20 Z" fill="#fef3c7" stroke="#0f2647" stroke-width="3"/>
-                <!-- Filament -->
                 <path d="M46 38 Q50 30 50 48 Q50 30 54 38" stroke="#f97316" stroke-width="3" fill="none"/>
-                <!-- Base -->
                 <rect x="43" y="59" width="14" height="4" rx="2" fill="#0f2647"/>
                 <rect x="45" y="63" width="10" height="3" rx="1.5" fill="#0f2647"/>
-                <!-- Book Base -->
                 <path d="M20 78 Q50 68 50 62 Q50 68 80 78 L80 66 Q50 56 50 50 Q50 56 20 66 Z" fill="#38bdf8" stroke="#0f2647" stroke-width="3"/>
                 <path d="M20 78 L20 72 M80 78 L80 72" stroke="#0f2647" stroke-width="3"/>
               </svg>
@@ -377,10 +335,9 @@
             <p class="event-card-catchphrase">A Quiz Challenge for the Brightest Young Science Minds!</p>
           </div>
 
-          <!-- Feature Bullets -->
           <div class="event-highlights-pills">
             <span class="pill-badge">👥 2 Members / Team</span>
-            <span class="pill-badge">⚡ Rapid Fire Rounds</span>
+            <span class="pill-badge">⚡ Rapid Fire & Buzzer</span>
             <span class="pill-badge">🏆 Cash Prizes & Trophies</span>
             <span class="pill-badge">🎓 Certificate of Excellence</span>
           </div>
@@ -389,37 +346,28 @@
             <button class="btn btn-navy-card" onclick="openEventDetailsModal('quiz')">
               Know More &rarr;
             </button>
-            <button class="btn btn-orange-card" onclick="openRegistrationModal('quiz')">
-              Register for Quiz Whiz &rarr;
-            </button>
+            <a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" class="btn btn-orange-card">
+              Register Now &rarr;
+            </a>
           </div>
         </div>
 
-        <!-- Event 2: Explora 26 -->
+        <!-- Event 2: Project Expo (Explora 26) -->
         <div class="event-card event-expo-card" id="card-expo">
-          <!-- Science doodle background motifs -->
           <div class="doodle-watermark doodle-gear">&#9881;</div>
           <div class="doodle-watermark doodle-rocket">&#128640;</div>
-          <div class="doodle-watermark doodle-circuit">&#9940;</div>
-
           <div class="card-num-watermark">02</div>
 
           <div class="card-header-icon-wrap">
             <div class="event-icon-team-gear">
-              <!-- Team Collaboration & Innovation SVG -->
               <svg viewBox="0 0 100 100" class="svg-event-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Outer Gear -->
                 <circle cx="50" cy="40" r="28" stroke="#10b981" stroke-width="3" stroke-dasharray="8 4" fill="#ecfdf5"/>
-                <!-- Team silhouettes -->
                 <circle cx="50" cy="32" r="8" fill="#0f2647"/>
                 <path d="M36 50 C36 43 42 41 50 41 C58 41 64 43 64 50 Z" fill="#0f2647"/>
-                
                 <circle cx="34" cy="35" r="6" fill="#047857"/>
                 <path d="M22 52 C22 46 27 45 34 45 C38 45 42 46 44 49 Z" fill="#047857"/>
-
                 <circle cx="66" cy="35" r="6" fill="#047857"/>
                 <path d="M56 49 C58 46 62 45 66 45 C73 45 78 46 78 52 Z" fill="#047857"/>
-                <!-- Pedestal / Base -->
                 <rect x="25" y="62" width="50" height="6" rx="3" fill="#0f2647"/>
                 <path d="M40 68 L36 78 L64 78 L60 68 Z" fill="#10b981"/>
               </svg>
@@ -428,150 +376,82 @@
 
           <div class="event-card-titles">
             <div class="event-title-badge-row">
-              <h3 class="event-card-name">EXPLORA <span class="highlight-year">26</span></h3>
+              <h3 class="event-card-name">PROJECT EXPO</h3>
+              <span class="version-badge expo-badge">EXPLORA 26</span>
             </div>
-            <h4 class="event-card-type">Project Expo</h4>
+            <h4 class="event-card-type">Project Exhibition</h4>
             <p class="event-card-catchphrase">Innovate &bull; Create &bull; Collaborate &bull; Showcase Ideas Today, Solutions Tomorrow.</p>
           </div>
 
-          <!-- Feature Bullets -->
           <div class="event-highlights-pills">
             <span class="pill-badge">👥 2 to 4 Members / Team</span>
             <span class="pill-badge">💡 Working Prototype / Model</span>
             <span class="pill-badge">🌱 Green Tech, AI & Robotics</span>
-            <span class="pill-badge">🥇 Exclusive 4th Prize Category</span>
+            <span class="pill-badge">🥇 4th Prize Category Included</span>
           </div>
 
           <div class="event-card-actions">
             <button class="btn btn-navy-card" onclick="openEventDetailsModal('expo')">
               Know More &rarr;
             </button>
-            <button class="btn btn-orange-card" onclick="openRegistrationModal('expo')">
-              Register for Explora 26 &rarr;
+            <a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" class="btn btn-orange-card">
+              Register Now &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 3: Reel Making -->
+        <div class="event-card event-reel-card" id="card-reel">
+          <div class="doodle-watermark doodle-camera">&#127916;</div>
+          <div class="doodle-watermark doodle-sparkle">&#10024;</div>
+          <div class="card-num-watermark">03</div>
+
+          <div class="card-header-icon-wrap">
+            <div class="event-icon-reel">
+              <svg viewBox="0 0 100 100" class="svg-event-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Smartphone Outline -->
+                <rect x="32" y="15" width="36" height="70" rx="8" fill="#fdf4ff" stroke="#7e22ce" stroke-width="3"/>
+                <!-- Screen Area -->
+                <rect x="36" y="24" width="28" height="52" rx="4" fill="#fae8ff"/>
+                <!-- Speaker notch & Home dot -->
+                <line x1="45" y1="19" x2="55" y2="19" stroke="#7e22ce" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="50" cy="80" r="2.5" fill="#7e22ce"/>
+                <!-- Play triangle icon -->
+                <polygon points="46,44 58,50 46,56" fill="#a855f7"/>
+                <!-- Heart / Like badge -->
+                <circle cx="68" cy="34" r="8" fill="#ec4899"/>
+                <path d="M65 34 C65 32 67 31 68 32 C69 31 71 32 71 34 C71 36 68 38 68 38 C68 38 65 36 65 34 Z" fill="#ffffff"/>
+                <!-- Music note -->
+                <path d="M26 40 L26 30 L32 32 L32 38" stroke="#a855f7" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="24" cy="40" r="3" fill="#a855f7"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="event-card-titles">
+            <div class="event-title-badge-row">
+              <h3 class="event-card-name">REEL MAKING</h3>
+              <span class="version-badge reel-badge">CREATIVE</span>
+            </div>
+            <h4 class="event-card-type">Video Creation Contest</h4>
+            <p class="event-card-catchphrase">Capture the Science Spark! Create captivating 30-60s reels on tech, science and campus life.</p>
+          </div>
+
+          <div class="event-highlights-pills">
+            <span class="pill-badge">👥 1 to 2 Members / Team</span>
+            <span class="pill-badge">⏱️ 30 - 60 Seconds</span>
+            <span class="pill-badge">📱 9:16 Vertical Video</span>
+            <span class="pill-badge">🏆 Cash Awards & Certificate</span>
+          </div>
+
+          <div class="event-card-actions">
+            <button class="btn btn-navy-card" onclick="openEventDetailsModal('reel')">
+              Know More &rarr;
             </button>
+            <a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" class="btn btn-orange-card">
+              Register Now &rarr;
+            </a>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Dedicated Registration Cards Hub Section -->
-  <section class="registration-hub-section" id="register">
-    <div class="container">
-      <div class="hub-header text-center">
-        <div class="section-tag center-tag">
-          <span class="tag-bar"></span>
-          <span>EVENT REGISTRATION CARDS</span>
-          <span class="tag-bar"></span>
-        </div>
-        <h2 class="section-title">
-          Select Your Event & <span class="highlight-orange">Register Your School Team</span>
-        </h2>
-        <p class="section-subtitle max-w-700">
-          Official registration is 100% free of cost. Choose an event card below to submit your team details and receive your instant verified Entry Pass.
-        </p>
-      </div>
-
-      <!-- Registration Fast Action Cards -->
-      <div class="reg-cards-grid">
-        <!-- Register Card: Quiz Whiz -->
-        <div class="reg-flow-card reg-quiz-theme">
-          <div class="reg-card-badge">Competition 01</div>
-          <div class="reg-card-icon-banner">
-            <div class="reg-avatar quiz-avatar">
-              <span>🧠</span>
-            </div>
-            <div>
-              <h3>QUIZ WHIZ V2.0</h3>
-              <p>Science & Technology Championship</p>
-            </div>
-          </div>
-
-          <div class="reg-card-specs">
-            <div class="spec-row">
-              <span class="spec-label">Eligible Classes:</span>
-              <span class="spec-val">Class 8th to 12th</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-label">Team Strength:</span>
-              <span class="spec-val">2 Students per team</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-label">Teams Per School:</span>
-              <span class="spec-val">Up to 3 Teams</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-label">Rounds:</span>
-              <span class="spec-val">Prelims (Screening) + Grand Stage Finale</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-label">Entry Fee:</span>
-              <span class="spec-val highlight-free">FREE (Food & Kit Provided)</span>
-            </div>
-          </div>
-
-          <div class="reg-card-footer">
-            <button class="btn btn-primary-reg" onclick="openRegistrationModal('quiz')">
-              <span>Register Team for Quiz Whiz</span>
-              <span class="btn-icon">&rarr;</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Register Card: Explora 26 -->
-        <div class="reg-flow-card reg-expo-theme">
-          <div class="reg-card-badge expo-badge">Competition 02</div>
-          <div class="reg-card-icon-banner">
-            <div class="reg-avatar expo-avatar">
-              <span>🚀</span>
-            </div>
-            <div>
-              <h3>EXPLORA 26</h3>
-              <p>State-Level School Project Expo</p>
-            </div>
-          </div>
-
-          <div class="reg-card-specs">
-            <div class="spec-row">
-              <span class="spec-label">Eligible Classes:</span>
-              <span class="spec-val">Class 8th to 12th</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-label">Team Strength:</span>
-              <span class="spec-val">2 to 4 Students per team</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-label">Themes:</span>
-              <span class="spec-val">EcoTech, Smart Robotics, Applied Science</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-label">Requirements:</span>
-              <span class="spec-val">Working Model / Chart / Prototype</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-label">Entry Fee:</span>
-              <span class="spec-val highlight-free">FREE (Display Stall & Power provided)</span>
-            </div>
-          </div>
-
-          <div class="reg-card-footer">
-            <button class="btn btn-primary-reg btn-expo" onclick="openRegistrationModal('expo')">
-              <span>Register Team for Explora 26</span>
-              <span class="btn-icon">&rarr;</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quick Lookup Bar for registered schools -->
-      <div class="reg-lookup-bar">
-        <div class="lookup-text">
-          <strong>Already registered your school team?</strong>
-          <span>Verify your team status or re-download your official Entry Pass.</span>
-        </div>
-        <div class="lookup-form">
-          <input type="text" id="lookupInput" placeholder="Enter Registration ID (e.g. IGN26-QW-1042)" aria-label="Registration ID lookup">
-          <button class="btn btn-navy-sm" onclick="lookupRegistration()">Check Pass &rarr;</button>
         </div>
       </div>
     </div>
@@ -600,7 +480,6 @@
         <!-- 1st Prize: Gold -->
         <div class="prize-card prize-card-gold">
           <div class="prize-trophy-icon">
-            <!-- Trophy SVG -->
             <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34c3-.97 5-3.8 5-7.66V4H6v7c0 3.86 2 6.69 5 7.66z"></path></svg>
           </div>
           <span class="prize-rank">First Prize</span>
@@ -613,7 +492,6 @@
         <!-- 2nd Prize: Sky Blue -->
         <div class="prize-card prize-card-blue">
           <div class="prize-trophy-icon">
-            <!-- Medal SVG -->
             <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
           </div>
           <span class="prize-rank">Second Prize</span>
@@ -626,7 +504,6 @@
         <!-- 3rd Prize: Pink / Purple -->
         <div class="prize-card prize-card-pink">
           <div class="prize-trophy-icon">
-            <!-- Medal SVG -->
             <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#a21caf" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
           </div>
           <span class="prize-rank">Third Prize</span>
@@ -639,7 +516,6 @@
         <!-- 4th Prize: Mint Green -->
         <div class="prize-card prize-card-green">
           <div class="prize-trophy-icon">
-            <!-- Star SVG -->
             <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
           </div>
           <span class="prize-rank">Fourth Prize</span>
@@ -650,7 +526,7 @@
         </div>
       </div>
 
-      <!-- Quick Info Bar (Mockup exact replica) -->
+      <!-- Quick Info Bar -->
       <div class="event-details-card-bar">
         <div class="detail-block">
           <div class="detail-icon">
@@ -658,7 +534,19 @@
           </div>
           <div class="detail-text">
             <span class="detail-label">Event Date</span>
-            <span class="detail-value">November 5, 2026</span>
+            <span class="detail-value">November 24, 2026</span>
+          </div>
+        </div>
+
+        <div class="detail-divider"></div>
+
+        <div class="detail-block">
+          <div class="detail-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f2647" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="detail-text">
+            <span class="detail-label">Last Date to Register</span>
+            <span class="detail-value">22 / 11 / 2026</span>
           </div>
         </div>
 
@@ -678,95 +566,11 @@
 
         <div class="detail-block">
           <div class="detail-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f2647" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
           </div>
           <div class="detail-text">
-            <span class="detail-label">Eligibility</span>
-            <span class="detail-value">All Schools are invited</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Schedule Section -->
-  <section class="schedule-section" id="schedule">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-tag center-tag">
-          <span class="tag-bar"></span>
-          <span>PROGRAM SCHEDULE</span>
-          <span class="tag-bar"></span>
-        </div>
-        <h2 class="section-title">
-          Timeline for <span class="highlight-orange">November 5, 2026</span>
-        </h2>
-        <p class="section-subtitle max-w-700">
-          Planned to precision for an immersive, action-packed scientific experience.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <!-- Item 1 -->
-        <div class="timeline-item">
-          <div class="timeline-time">08:30 AM &ndash; 09:30 AM</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h4>Registration & Welcome Kit</h4>
-            <p>Verification of school teams, kit distribution, breakfast & networking at the TKMIT Main Foyer.</p>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="timeline-item">
-          <div class="timeline-time">09:30 AM &ndash; 10:15 AM</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h4>Grand Inaugural Ceremony</h4>
-            <p>Lamp lighting, welcome address by Principal & HOD Applied Science, and keynote on emerging engineering technologies.</p>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="timeline-item">
-          <div class="timeline-time">10:30 AM &ndash; 12:30 PM</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h4>Morning Competitions</h4>
-            <div class="timeline-subevents">
-              <span class="subevent-tag blue">Quiz Whiz: Written Prelims</span>
-              <span class="subevent-tag green">Explora 26: Project Stall Setup & Demo</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="timeline-item">
-          <div class="timeline-time">01:00 PM &ndash; 02:00 PM</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h4>Lunch & Campus Tour</h4>
-            <p>Complimentary lunch for all participants & mentors, followed by an interactive showcase of college research labs.</p>
-          </div>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="timeline-item">
-          <div class="timeline-time">02:00 PM &ndash; 03:45 PM</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h4>Grand Stage Finals & Jury Evaluation</h4>
-            <p>Top 6 Quiz teams battle on stage in multimedia buzzer rounds; Expert jury inspects shortlisted Explora project booths.</p>
-          </div>
-        </div>
-
-        <!-- Item 6 -->
-        <div class="timeline-item highlight-item">
-          <div class="timeline-time">04:00 PM &ndash; 05:00 PM</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h4>Valedictory & Cash Prize Distribution</h4>
-            <p>Awarding ₹ 50,000+ cash prizes, rolling trophies, medals, and certificates of honor to our triumphant young champions!</p>
+            <span class="detail-label">Registration</span>
+            <span class="detail-value" style="color: #059669;">Free of Cost</span>
           </div>
         </div>
       </div>
@@ -794,16 +598,14 @@
       </div>
 
       <div class="why-features-grid">
-        <!-- Feature 1 -->
         <div class="feature-card">
           <div class="feature-circle">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34c3-.97 5-3.8 5-7.66V4H6v7c0 3.86 2 6.69 5 7.66z"></path></svg>
           </div>
           <h4 class="feature-title">Showcase Your Talent</h4>
-          <p class="feature-desc">Present your scientific intellect and breakthrough project ideas on an esteemed state platform.</p>
+          <p class="feature-desc">Present your scientific intellect, working projects, and creative media on an esteemed state platform.</p>
         </div>
 
-        <!-- Feature 2 -->
         <div class="feature-card">
           <div class="feature-circle">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M12 2a9 9 0 0 0-9 9c0 3.6 2.1 6.7 5.1 8.2v1.8c0 .6.4 1 1 1h5.8c.6 0 1-.4 1-1v-1.8c3-1.5 5.1-4.6 5.1-8.2a9 9 0 0 0-9-9z"></path><path d="M9 22h6"></path></svg>
@@ -812,7 +614,6 @@
           <p class="feature-desc">Discover how core science fuels modern robotics, aerospace, computing, and environmental engineering.</p>
         </div>
 
-        <!-- Feature 3 -->
         <div class="feature-card">
           <div class="feature-circle">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -821,7 +622,6 @@
           <p class="feature-desc">Network with passionate fellow school students, university mentors, and visionary educators.</p>
         </div>
 
-        <!-- Feature 4 -->
         <div class="feature-card">
           <div class="feature-circle">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><rect x="3" y="8" width="18" height="14" rx="2"></rect><path d="M12 5a3 3 0 1 0-3 3"></path><path d="M12 5a3 3 0 1 1 3 3"></path><path d="M12 8v14"></path><path d="M3 13h18"></path></svg>
@@ -831,10 +631,9 @@
         </div>
       </div>
 
-      <!-- Call to Action Banner (Mockup Replica) -->
+      <!-- Call to Action Banner -->
       <div class="cta-banner-wrapper">
         <div class="cta-banner-card">
-          <!-- Left Chalkboard Graphic -->
           <div class="cta-chalkboard-art">
             <span class="chalk-stars">&#10022; &#10022;</span>
             <div class="chalk-title">Science</div>
@@ -843,35 +642,27 @@
             <div class="chalk-underline"></div>
           </div>
 
-          <!-- Center Content -->
           <div class="cta-center-text">
             <h3 class="cta-title">Ready to be a part of <span class="text-orange-glow">IGNITE 2026?</span></h3>
             <p class="cta-desc">
-              Register now and be a part of an exciting journey of knowledge, creativity and innovation.
+              Register your school team now before November 22, 2026 and be a part of an exciting journey of knowledge, creativity, and innovation.
             </p>
             <div class="cta-btn-box">
-              <a href="#register" class="btn btn-orange-banner">
-                Register Now <span class="arrow">&rarr;</span>
+              <a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" class="btn btn-orange-banner">
+                Register on Google Form <span class="arrow">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- Right Rocket Graphic -->
           <div class="cta-rocket-art">
             <svg class="svg-rocket" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Rocket Body -->
               <path d="M75 25 C50 35 40 55 42 75 L55 88 C75 90 95 80 105 55 C108 30 85 20 75 25 Z" stroke="#ffffff" stroke-width="2.5" fill="rgba(255,255,255,0.08)"/>
-              <!-- Fin 1 -->
               <path d="M42 75 L28 85 L38 93 L55 88" stroke="#ffffff" stroke-width="2.5" fill="none"/>
-              <!-- Fin 2 -->
               <path d="M85 30 L95 18 L103 28 L98 45" stroke="#ffffff" stroke-width="2.5" fill="none"/>
-              <!-- Porthole -->
               <circle cx="70" cy="52" r="8" stroke="#ff793f" stroke-width="2.5" fill="#0f2647"/>
               <circle cx="70" cy="52" r="4" fill="#ffffff"/>
-              <!-- Thruster Flame -->
               <path d="M35 90 Q20 105 15 110 Q28 100 48 95 Z" fill="#ff793f"/>
               <path d="M38 92 Q26 102 24 105 Q32 98 44 95 Z" fill="#fef08a"/>
-              <!-- Stars -->
               <circle cx="20" cy="30" r="2" fill="#ffffff"/>
               <circle cx="105" cy="95" r="2.5" fill="#fef08a"/>
               <circle cx="95" cy="110" r="1.5" fill="#ffffff"/>
@@ -882,7 +673,7 @@
     </div>
   </section>
 
-  <!-- Contact & Venue Section -->
+  <!-- Contact & Coordinators Section -->
   <section class="contact-section" id="contact">
     <div class="container">
       <div class="contact-grid">
@@ -895,34 +686,59 @@
             Have Questions? <span class="highlight-orange">Contact Our Coordinators</span>
           </h2>
           <p class="about-lead">
-            We are here to assist principals, science teachers, and student participants with registrations, project guidelines, and transport queries.
+            Feel free to contact the Head of Department or our faculty coordinators for event guidelines, team queries, and logistics.
           </p>
 
+          <!-- Coordinators Stack -->
           <div class="contact-cards-stack">
-            <div class="coordinator-card">
-              <div class="coord-avatar">👨‍🏫</div>
+            <!-- HoD Card -->
+            <div class="coordinator-card hod-card">
+              <div class="coord-avatar">👩‍🏫</div>
               <div class="coord-details">
-                <strong>Staff Coordinator</strong>
-                <span class="coord-dept">Department of Applied Science and Engineering</span>
-                <span class="coord-phone">📞 +91 94471 23456 | ✉️ ignite2026@tkmit.ac.in</span>
+                <span class="coord-role-badge">Head of Department</span>
+                <strong>Ms. Miji Philip</strong>
+                <span class="coord-dept">HoD Dept. of Applied Science and Engineering</span>
+                <a href="tel:+919847413471" class="coord-phone-link">📞 +91 98474 13471</a>
               </div>
             </div>
 
-            <div class="coordinator-card">
-              <div class="coord-avatar">👩‍🎓</div>
-              <div class="coord-details">
-                <strong>Student Convenors</strong>
-                <span class="coord-dept">IGNITE 26 Organizing Committee</span>
-                <span class="coord-phone">📞 +91 98952 78901 / +91 85473 12345</span>
-              </div>
+            <!-- Faculty Coordinators Header -->
+            <div class="faculty-group-title">
+              <h4>Faculty Coordinators</h4>
             </div>
 
-            <div class="coordinator-card">
-              <div class="coord-avatar">📍</div>
-              <div class="coord-details">
-                <strong>Event Location</strong>
-                <span class="coord-dept">TKM Institute of Technology, Musaliar Hills</span>
-                <span class="coord-phone">Karuvelil P.O., Ezhukone, Kollam - 691 505, Kerala</span>
+            <!-- Faculty Grid -->
+            <div class="faculty-cards-grid">
+              <div class="faculty-mini-card">
+                <div class="mini-avatar">👨‍🏫</div>
+                <div>
+                  <strong>Dr. Sabeer Sain R.</strong>
+                  <a href="tel:+919400407912" class="coord-phone-link">📞 9400407912</a>
+                </div>
+              </div>
+
+              <div class="faculty-mini-card">
+                <div class="mini-avatar">👨‍🏫</div>
+                <div>
+                  <strong>Mr. Sreejith B.</strong>
+                  <a href="tel:+919526704357" class="coord-phone-link">📞 9526704357</a>
+                </div>
+              </div>
+
+              <div class="faculty-mini-card">
+                <div class="mini-avatar">👨‍🏫</div>
+                <div>
+                  <strong>Mr. Sarath Gopal</strong>
+                  <a href="tel:+917034125964" class="coord-phone-link">📞 7034125964</a>
+                </div>
+              </div>
+
+              <div class="faculty-mini-card">
+                <div class="mini-avatar">👨‍🏫</div>
+                <div>
+                  <strong>Mr. Riyas A. N.</strong>
+                  <a href="tel:+919496535483" class="coord-phone-link">📞 9496535483</a>
+                </div>
               </div>
             </div>
           </div>
@@ -934,28 +750,34 @@
               <span class="map-indicator"></span>
               <span>TKMIT Main Campus, Kollam, Kerala</span>
             </div>
-            <!-- Embedded Map placeholder / directions -->
             <div class="interactive-directions-box">
               <div class="directions-content">
-                <h4>Easy Campus Accessibility</h4>
-                <p>Located on the Kollam-Kulathupuzha highway, just 6 km from Kundara and 20 km from Kollam Railway Station.</p>
+                <h4>Campus Accessibility</h4>
+                <p>TKM Institute of Technology, Musaliar Hills, Karuvelil P.O., Ezhukone, Kollam - 691 505, Kerala.</p>
                 <div class="travel-modes">
                   <div class="mode-item">
                     <span>🚆</span>
                     <div>
                       <strong>By Train</strong>
-                      <small>Kollam Junction (22 km) / Kundara Stn (7 km)</small>
+                      <small>Kollam Junction (22 km) / Kundara Station (7 km)</small>
                     </div>
                   </div>
                   <div class="mode-item">
                     <span>🚌</span>
                     <div>
                       <strong>By Bus</strong>
-                      <small>Regular KSRTC & Private buses to Karuvelil</small>
+                      <small>Regular buses to Karuvelil / Ezhukone</small>
+                    </div>
+                  </div>
+                  <div class="mode-item">
+                    <span>📝</span>
+                    <div>
+                      <strong>Official Registration Link</strong>
+                      <small><a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" style="color: #ff6b2b; font-weight: bold;">https://forms.gle/A7SG6154X9wK2URp9</a></small>
                     </div>
                   </div>
                 </div>
-                <a href="https://maps.google.com/?q=TKM+Institute+of+Technology+Kollam" target="_blank" rel="noopener" class="btn btn-navy-sm mt-3">
+                <a href="https://maps.google.com/?q=TKM+Institute+of+Technology+Kollam" target="_blank" rel="noopener noreferrer" class="btn btn-navy-sm mt-3">
                   Open in Google Maps &nearr;
                 </a>
               </div>
@@ -966,24 +788,15 @@
     </div>
   </section>
 
-  <!-- Site Footer (Mockup Exact Replica) -->
+  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container footer-main">
       <div class="footer-col-brand">
         <div class="footer-college-identity">
-          <svg class="tkm-crest footer-crest" viewBox="0 0 100 100" fill="none">
-            <circle cx="50" cy="50" r="46" stroke="#0f2647" stroke-width="4" fill="#ffffff"/>
-            <path d="M50 20 L54 26 L62 25 L64 32 L71 34 L70 42 L77 46 L74 54 L79 60 L73 66 L75 74 L68 77 L66 84 L58 84 L54 90 L46 90 L42 84 L34 84 L32 77 L25 74 L27 66 L21 60 L26 54 L23 46 L30 42 L29 34 L36 32 L38 25 L46 26 Z" fill="#0f2647" opacity="0.15"/>
-            <path d="M30 65 Q50 58 50 48 Q50 58 70 65 L70 45 Q50 38 50 30 Q50 38 30 45 Z" fill="#ff6b2b"/>
-            <path d="M50 22 C53 28 58 32 50 42 C42 32 47 28 50 22 Z" fill="#f7971e"/>
-            <circle cx="50" cy="50" r="6" fill="#0f2647"/>
-          </svg>
-          <div>
-            <h3 class="footer-brand-title">TKM</h3>
-            <h4 class="footer-brand-sub">INSTITUTE OF TECHNOLOGY</h4>
-          </div>
+          <img src="assets/ignite-logo.png" alt="IGNITE 2026" class="footer-ignite-logo">
         </div>
         <p class="footer-address">
+          <strong>TKM Institute of Technology</strong><br>
           Musaliar Hills, Karuvelil P.O., Kollam, Kerala, India - 691 505<br>
           <span class="footer-affiliation">Approved by AICTE, Affiliated to APJAKTU</span>
         </p>
@@ -996,8 +809,8 @@
           <li><a href="#about">About</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#prizes">Prizes</a></li>
-          <li><a href="#schedule">Schedule</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" style="color: #ff6b2b; font-weight: bold;">Register on Google Form &rarr;</a></li>
         </ul>
       </div>
 
@@ -1033,379 +846,13 @@
     </div>
   </footer>
 
-  <!-- ============================================== -->
-  <!-- MODAL 1: EVENT DETAILS MODAL ("Know More") -->
-  <!-- ============================================== -->
+  <!-- EVENT DETAILS MODAL ("Know More") -->
   <div class="modal-overlay" id="eventDetailsModal" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <button class="modal-close-btn" onclick="closeModal('eventDetailsModal')" aria-label="Close dialog">&times;</button>
-      
-      <div class="modal-body-content" id="eventDetailsBody">
-        <!-- Injected via JavaScript based on selected event -->
-      </div>
+      <div class="modal-body-content" id="eventDetailsBody"></div>
     </div>
   </div>
-
-  <!-- ============================================== -->
-  <!-- MODAL 2: REGISTRATION FLOW MODAL (Cards & Form) -->
-  <!-- ============================================== -->
-  <div class="modal-overlay" id="registrationModal" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <button class="modal-close-btn" onclick="closeModal('registrationModal')" aria-label="Close dialog">&times;</button>
-      
-      <div class="reg-modal-wrapper">
-        <!-- Modal Sidebar / Step Summary -->
-        <div class="reg-sidebar">
-          <div class="sidebar-fest-title">
-            <span class="sidebar-tag">IGNITE 2026 REGISTRATION</span>
-            <h3 id="sidebarEventTitle">Quiz Whiz v2.0</h3>
-          </div>
-
-          <div class="event-badge-highlight" id="sidebarBadgeBox">
-            <div class="sidebar-icon" id="sidebarIcon">🧠</div>
-            <div>
-              <span class="badge-title" id="sidebarType">Quiz Competition</span>
-              <span class="badge-sub" id="sidebarTeamSize">2 Students per Team</span>
-            </div>
-          </div>
-
-          <div class="prizes-reminder-box">
-            <span class="reminder-label">Event Cash Prize Pool</span>
-            <div class="reminder-amount">₹ 50,000+</div>
-            <p>1st: ₹ 20,000 &bull; 2nd: ₹ 15,000 &bull; 3rd: ₹ 10,000</p>
-          </div>
-
-          <div class="steps-progress-list">
-            <div class="step-indicator active" id="stepInd1">
-              <span class="step-circle">1</span>
-              <span>School Information</span>
-            </div>
-            <div class="step-indicator" id="stepInd2">
-              <span class="step-circle">2</span>
-              <span>Team Members</span>
-            </div>
-            <div class="step-indicator" id="stepInd3">
-              <span class="step-circle">3</span>
-              <span>Event Details</span>
-            </div>
-            <div class="step-indicator" id="stepInd4">
-              <span class="step-circle">4</span>
-              <span>Entry Pass Generated</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal Main Content Area -->
-        <div class="reg-form-pane">
-          <!-- Step 1: School Details -->
-          <div class="form-step-pane active" id="formStep1">
-            <div class="step-heading">
-              <h3>School & Mentor Details</h3>
-              <p>Please enter your institution information and accompanying teacher's contact details.</p>
-            </div>
-
-            <div class="form-grid">
-              <div class="form-group full-col">
-                <label for="schoolName">School / Junior College Name <span class="required">*</span></label>
-                <input type="text" id="schoolName" placeholder="e.g. St. Thomas Higher Secondary School" required>
-              </div>
-
-              <div class="form-group">
-                <label for="schoolDistrict">District / City <span class="required">*</span></label>
-                <input type="text" id="schoolDistrict" placeholder="e.g. Kollam / Thiruvananthapuram" required>
-              </div>
-
-              <div class="form-group">
-                <label for="schoolBoard">Curriculum / Board <span class="required">*</span></label>
-                <select id="schoolBoard" required>
-                  <option value="">Select Board</option>
-                  <option value="State Syllabus (Kerala)">Kerala State Board (SSLC / +2)</option>
-                  <option value="CBSE">CBSE</option>
-                  <option value="ICSE / ISC">ICSE / ISC</option>
-                  <option value="Other">Other / International</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="teacherName">Accompanying Teacher Name <span class="required">*</span></label>
-                <input type="text" id="teacherName" placeholder="Teacher In-Charge" required>
-              </div>
-
-              <div class="form-group">
-                <label for="teacherPhone">Teacher Contact Number <span class="required">*</span></label>
-                <input type="tel" id="teacherPhone" placeholder="10-digit mobile number" required>
-              </div>
-            </div>
-
-            <div class="form-action-bar">
-              <button type="button" class="btn btn-outline-gray" onclick="closeModal('registrationModal')">Cancel</button>
-              <button type="button" class="btn btn-navy" onclick="goToStep(2)">Next: Team Members &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Step 2: Team Members -->
-          <div class="form-step-pane" id="formStep2">
-            <div class="step-heading">
-              <h3>Participant Information</h3>
-              <p id="teamSizeSubtitle">Add the student delegates representing your institution.</p>
-            </div>
-
-            <!-- Member 1 (Leader) -->
-            <div class="member-input-card">
-              <div class="member-header">
-                <span class="member-tag">Participant 1 (Team Leader)</span>
-              </div>
-              <div class="form-grid">
-                <div class="form-group">
-                  <label for="m1Name">Student Name <span class="required">*</span></label>
-                  <input type="text" id="m1Name" placeholder="Full name" required>
-                </div>
-                <div class="form-group">
-                  <label for="m1Class">Class / Grade <span class="required">*</span></label>
-                  <select id="m1Class" required>
-                    <option value="">Select Class</option>
-                    <option value="Class 8">Class 8</option>
-                    <option value="Class 9">Class 9</option>
-                    <option value="Class 10">Class 10</option>
-                    <option value="Class 11 (+1)">Class 11 (+1 Science)</option>
-                    <option value="Class 12 (+2)">Class 12 (+2 Science)</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="m1Phone">Mobile Number <span class="required">*</span></label>
-                  <input type="tel" id="m1Phone" placeholder="Mobile / WhatsApp number" required>
-                </div>
-                <div class="form-group">
-                  <label for="m1Email">Email Address</label>
-                  <input type="email" id="m1Email" placeholder="student@example.com">
-                </div>
-              </div>
-            </div>
-
-            <!-- Member 2 -->
-            <div class="member-input-card">
-              <div class="member-header">
-                <span class="member-tag">Participant 2</span>
-              </div>
-              <div class="form-grid">
-                <div class="form-group">
-                  <label for="m2Name">Student Name <span class="required">*</span></label>
-                  <input type="text" id="m2Name" placeholder="Full name" required>
-                </div>
-                <div class="form-group">
-                  <label for="m2Class">Class / Grade <span class="required">*</span></label>
-                  <select id="m2Class" required>
-                    <option value="">Select Class</option>
-                    <option value="Class 8">Class 8</option>
-                    <option value="Class 9">Class 9</option>
-                    <option value="Class 10">Class 10</option>
-                    <option value="Class 11 (+1)">Class 11 (+1 Science)</option>
-                    <option value="Class 12 (+2)">Class 12 (+2 Science)</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Member 3 & 4 (Dynamic for Explora Expo) -->
-            <div id="expoExtraMembersContainer" style="display: none;">
-              <div class="member-input-card">
-                <div class="member-header">
-                  <span class="member-tag">Participant 3 (Optional for Explora)</span>
-                </div>
-                <div class="form-grid">
-                  <div class="form-group">
-                    <label for="m3Name">Student Name</label>
-                    <input type="text" id="m3Name" placeholder="Full name">
-                  </div>
-                  <div class="form-group">
-                    <label for="m3Class">Class / Grade</label>
-                    <select id="m3Class">
-                      <option value="">Select Class</option>
-                      <option value="Class 8">Class 8</option>
-                      <option value="Class 9">Class 9</option>
-                      <option value="Class 10">Class 10</option>
-                      <option value="Class 11 (+1)">Class 11 (+1 Science)</option>
-                      <option value="Class 12 (+2)">Class 12 (+2 Science)</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="member-input-card">
-                <div class="member-header">
-                  <span class="member-tag">Participant 4 (Optional for Explora)</span>
-                </div>
-                <div class="form-grid">
-                  <div class="form-group">
-                    <label for="m4Name">Student Name</label>
-                    <input type="text" id="m4Name" placeholder="Full name">
-                  </div>
-                  <div class="form-group">
-                    <label for="m4Class">Class / Grade</label>
-                    <select id="m4Class">
-                      <option value="">Select Class</option>
-                      <option value="Class 8">Class 8</option>
-                      <option value="Class 9">Class 9</option>
-                      <option value="Class 10">Class 10</option>
-                      <option value="Class 11 (+1)">Class 11 (+1 Science)</option>
-                      <option value="Class 12 (+2)">Class 12 (+2 Science)</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-action-bar">
-              <button type="button" class="btn btn-outline-gray" onclick="goToStep(1)">&larr; Back</button>
-              <button type="button" class="btn btn-navy" onclick="goToStep(3)">Next: Event Details &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Step 3: Event Specifics & Confirmation -->
-          <div class="form-step-pane" id="formStep3">
-            <div class="step-heading">
-              <h3>Confirm Event Requirements</h3>
-              <p>Specify project requirements or dietary/logistical considerations.</p>
-            </div>
-
-            <!-- Quiz specific details -->
-            <div id="quizSpecificFields">
-              <div class="notice-info-box">
-                <strong>Quiz Whiz Rules:</strong>
-                <ul>
-                  <li>Written screening prelims will begin promptly at 10:30 AM.</li>
-                  <li>Top 6 teams with highest scores will advance to the Grand Stage Finale.</li>
-                  <li>No calculators or mobile devices allowed during the quiz rounds.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Expo specific details -->
-            <div id="expoSpecificFields" style="display: none;">
-              <div class="form-grid">
-                <div class="form-group full-col">
-                  <label for="projectTitle">Project / Working Model Title <span class="required">*</span></label>
-                  <input type="text" id="projectTitle" placeholder="e.g. Smart Solar Hydroponics System">
-                </div>
-
-                <div class="form-group full-col">
-                  <label for="projectCategory">Theme / Domain <span class="required">*</span></label>
-                  <select id="projectCategory">
-                    <option value="">Select Domain</option>
-                    <option value="Renewable Energy & Clean Tech">Renewable Energy & Clean Tech</option>
-                    <option value="AI, IoT & Smart Robotics">AI, IoT & Smart Robotics</option>
-                    <option value="Environmental & Waste Management">Environmental & Waste Management</option>
-                    <option value="Applied Physics & Engineering Mechanics">Applied Physics & Engineering Mechanics</option>
-                    <option value="Health & Biotechnology">Health & Biotechnology</option>
-                    <option value="Other Science Innovation">Other Science Innovation</option>
-                  </select>
-                </div>
-
-                <div class="form-group full-col">
-                  <label for="powerRequirement">Special Requirements (e.g. 230V AC socket, water source, dark room)</label>
-                  <input type="text" id="powerRequirement" placeholder="Standard 230V power socket required (or None)">
-                </div>
-              </div>
-            </div>
-
-            <div class="terms-checkbox-wrap">
-              <label class="custom-checkbox-container">
-                <input type="checkbox" id="rulesConsent" required checked>
-                <span class="checkmark"></span>
-                <span class="checkbox-label">
-                  We certify that all submitted students are bona-fide students of our school and agree to follow the rules and code of conduct of IGNITE 2026.
-                </span>
-              </label>
-            </div>
-
-            <div class="form-action-bar">
-              <button type="button" class="btn btn-outline-gray" onclick="goToStep(2)">&larr; Back</button>
-              <button type="button" class="btn btn-orange-submit" onclick="submitRegistration()">
-                <span>Confirm & Generate Official Pass</span>
-                <span>✨</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Step 4: Official Entry Pass Card / Ticket -->
-          <div class="form-step-pane" id="formStep4">
-            <div class="pass-success-header text-center">
-              <div class="success-icon-badge">🎉</div>
-              <h3>Registration Confirmed!</h3>
-              <p>Your team has been successfully enrolled for <strong>IGNITE 2026</strong>. Present this pass at the college registration desk.</p>
-            </div>
-
-            <!-- Digital Admit Card / Pass -->
-            <div class="digital-ticket-container" id="digitalTicketCard">
-              <div class="ticket-header-strip">
-                <div class="ticket-crest-group">
-                  <span class="tkm-mini-tag">TKM INSTITUTE OF TECHNOLOGY</span>
-                  <span class="fest-mini-tag">IGNITE 2026 OFFICIAL DELEGATE PASS</span>
-                </div>
-                <div class="ticket-id-badge" id="ticketIdDisplay">IGN26-QW-1042</div>
-              </div>
-
-              <div class="ticket-body-grid">
-                <div class="ticket-meta-left">
-                  <div class="ticket-event-name" id="ticketEventDisplay">QUIZ WHIZ V2.0</div>
-                  <div class="ticket-school-name" id="ticketSchoolDisplay">St. Thomas Higher Secondary School</div>
-                  <div class="ticket-location" id="ticketDistrictDisplay">Kollam, Kerala</div>
-
-                  <div class="ticket-participants-list">
-                    <strong>Team Members:</strong>
-                    <div id="ticketMembersDisplay">1. Rahul S (Class 11) &bull; 2. Ananya M (Class 11)</div>
-                  </div>
-
-                  <div class="ticket-schedule-row">
-                    <div>
-                      <small>DATE</small>
-                      <strong>05 Nov 2026</strong>
-                    </div>
-                    <div>
-                      <small>REPORTING TIME</small>
-                      <strong>08:30 AM</strong>
-                    </div>
-                    <div>
-                      <small>VENUE</small>
-                      <strong>TKMIT Campus</strong>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="ticket-qr-right">
-                  <div class="qr-canvas-box">
-                    <canvas id="ticketQrCanvas" width="110" height="110"></canvas>
-                  </div>
-                  <span class="qr-label">Scan at Entry Desk</span>
-                  <span class="verified-badge">&#10003; VERIFIED PASS</span>
-                </div>
-              </div>
-
-              <div class="ticket-footer-strip">
-                <span>Free Entry &bull; Lunch & Kit Included &bull; Carry School ID Card</span>
-                <span>Department of Applied Science and Engineering</span>
-              </div>
-            </div>
-
-            <div class="ticket-action-btns">
-              <button class="btn btn-navy" onclick="printPass()">
-                🖨️ Print / Save as PDF
-              </button>
-              <button class="btn btn-outline-glow" onclick="downloadPass()">
-                💾 Download Pass Card
-              </button>
-              <button class="btn btn-orange-glow" onclick="closeModal('registrationModal')">
-                Done & Finish &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Notification Container -->
-  <div class="toast-container" id="toastContainer"></div>
 
   <script src="script.js"></script>
 </body>
