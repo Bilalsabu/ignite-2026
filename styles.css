@@ -903,7 +903,7 @@ section {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 45%;
   transition: transform 0.5s ease;
 }
 
@@ -2444,10 +2444,45 @@ section {
     justify-content: center;
   }
 
-  /* Event Cards */
+  /* Event Cards: Sliding Stacking Animation on Phone */
+  .events-grid-three {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    position: relative;
+    padding-bottom: 40px;
+  }
+
   .event-card {
-    padding: 22px 14px;
-    border-radius: 18px;
+    padding: 24px 18px;
+    border-radius: 22px;
+    position: sticky;
+    will-change: transform;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, filter 0.35s ease;
+  }
+
+  /* Sticky stacking heights: each subsequent card slides smoothly over the previous card */
+  #card-quiz {
+    top: 86px;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(15, 38, 71, 0.08);
+  }
+
+  #card-expo {
+    top: 104px;
+    z-index: 20;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.12), 0 12px 28px rgba(15, 38, 71, 0.16);
+  }
+
+  #card-reel {
+    top: 122px;
+    z-index: 30;
+    box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.16), 0 18px 36px rgba(15, 38, 71, 0.22);
+  }
+
+  .event-card.is-stacked {
+    transform: scale(0.96) translateY(-6px);
+    filter: brightness(0.92);
   }
 
   .event-card-name {
@@ -2675,3 +2710,1140 @@ section {
     font-size: 1.3rem;
   }
 }
+
+/* ==================================================
+   1. FRAMER-STYLE AMBIENT SCROLL PROGRESS BAR
+   ================================================== */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  width: 0%;
+  background: linear-gradient(90deg, #ff7b25 0%, #fbbf24 50%, #ef4444 100%);
+  z-index: 10001;
+  box-shadow: 0 0 10px rgba(255, 123, 37, 0.7);
+  transition: width 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+/* ==================================================
+   2. HERO SECTION COLLEGE LOGO
+   ================================================== */
+.hero-college-brand {
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-college-logo {
+  height: 52px;
+  max-width: 440px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.5));
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.hero-college-logo:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: drop-shadow(0 8px 22px rgba(255, 123, 37, 0.38));
+}
+
+@media (max-width: 768px) {
+  .hero-college-brand {
+    justify-content: center;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  .hero-college-logo {
+    height: 42px;
+    max-width: 90vw;
+  }
+}
+
+/* ==================================================
+   3. INFINITE MARQUEE TICKER (1.3 LAKH PRIZE POOL)
+   ================================================== */
+.marquee-ticker-section {
+  position: relative;
+  background: linear-gradient(90deg, #091322 0%, #0d1b33 50%, #091322 100%);
+  border-top: 1px solid rgba(255, 123, 37, 0.25);
+  border-bottom: 1px solid rgba(255, 123, 37, 0.25);
+  overflow: hidden;
+  padding: 14px 0;
+  z-index: 10;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.marquee-ticker-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marqueeScroll 32s linear infinite;
+}
+
+.marquee-ticker-section:hover .marquee-ticker-track {
+  animation-play-state: paused;
+}
+
+.marquee-ticker-content {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-right: 22px;
+  flex-shrink: 0;
+}
+
+.marquee-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+}
+
+.marquee-badge.glow-badge {
+  background: linear-gradient(135deg, rgba(255, 123, 37, 0.25) 0%, rgba(245, 158, 11, 0.2) 100%);
+  border-color: #ff7b25;
+  color: #fbbf24;
+  box-shadow: 0 0 14px rgba(255, 123, 37, 0.4);
+}
+
+.marquee-star {
+  color: #ff7b25;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.marquee-text {
+  color: #94a3b8;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.marquee-highlight {
+  color: #38bdf8;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==================================================
+   4. HIGHLIGHTED GLOWING MEGA GRAND PRIZE CARD (PURE GOLDEN GLOW)
+   ================================================== */
+.grand-prize-mega-card {
+  position: relative;
+  background: radial-gradient(circle at 50% 25%, #182338 0%, #0d1627 65%, #060b14 100%);
+  border-radius: 28px;
+  border: 2px solid rgba(245, 158, 11, 0.6);
+  padding: 42px 36px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  box-shadow: 0 0 35px rgba(245, 158, 11, 0.3), 0 16px 45px rgba(15, 38, 71, 0.45);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.grand-prize-mega-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #d97706 0%, #fbbf24 35%, #f59e0b 70%, #b45309 100%);
+  z-index: -1;
+  opacity: 0.75;
+  filter: blur(8px);
+  animation: goldenPulseGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes goldenPulseGlow {
+  0% {
+    opacity: 0.55;
+    filter: blur(6px);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+  }
+  100% {
+    opacity: 0.95;
+    filter: blur(12px);
+    box-shadow: 0 0 45px rgba(251, 191, 36, 0.6);
+  }
+}
+
+.grand-prize-mega-card:hover {
+  box-shadow: 0 0 50px rgba(245, 158, 11, 0.45), 0 20px 55px rgba(15, 38, 71, 0.55);
+}
+
+.mega-top-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  padding: 6px 16px;
+  border-radius: 999px;
+  color: #fbbf24;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.live-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 10px #fbbf24;
+  animation: livePulsing 1.8s infinite;
+}
+
+@keyframes livePulsing {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+
+.mega-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.mega-eyebrow {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #cbd5e1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.mega-amount-title {
+  font-family: var(--font-main);
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.mega-currency {
+  font-size: 2.8rem;
+  color: #fbbf24;
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.mega-highlight {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #fffbeb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 12px rgba(245, 158, 11, 0.6));
+}
+
+.mega-amount-words {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.mega-trophy-badge {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(245, 158, 11, 0.05) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.grand-prize-mega-card:hover .mega-trophy-badge {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.mega-trophy-emoji {
+  font-size: 4rem;
+  filter: drop-shadow(0 6px 14px rgba(251, 191, 36, 0.6));
+}
+
+.trophy-glow-halo {
+  position: absolute;
+  inset: -15px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.mega-perks-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 24px 0 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.mega-perk-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.mega-perk-item strong {
+  color: #ffffff;
+}
+
+.perk-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Mega Action Bar & Golden View Prizes Button */
+.mega-card-action-bar {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-golden-glow {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 13px 24px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.btn-golden-glow:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(245, 158, 11, 0.65);
+}
+
+.btn-outline-gold {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(251, 191, 36, 0.5);
+  color: #fbbf24;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 13px 22px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(251, 191, 36, 0.15);
+  border-color: #fbbf24;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .mega-amount-title {
+    font-size: 2.8rem;
+  }
+  .mega-perks-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .mega-trophy-badge {
+    width: 90px;
+    height: 90px;
+  }
+  .mega-trophy-emoji {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grand-prize-mega-card {
+    padding: 24px 20px;
+  }
+  .mega-main-row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .mega-amount-title {
+    font-size: 2.3rem;
+  }
+  .mega-perks-row {
+    grid-template-columns: 1fr;
+  }
+  .mega-card-action-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .mega-card-action-bar .btn {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* ==================================================
+   5. EVENT-WISE PRIZE BREAKDOWN CARDS
+   ================================================== */
+.event-wise-prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 38px;
+}
+
+.event-prize-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 24px 20px;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 6px 20px rgba(15, 38, 71, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.event-prize-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(15, 38, 71, 0.12);
+}
+
+.event-prize-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.event-prize-card-icon {
+  font-size: 1.8rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.event-prize-header-text {
+  flex: 1;
+}
+
+.event-prize-tag {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #0284c7;
+  text-transform: uppercase;
+}
+
+.event-prize-tag.expo-tag { color: #059669; }
+.event-prize-tag.reel-tag { color: #7e22ce; }
+
+.event-prize-card-title {
+  font-family: var(--font-main);
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--primary-navy);
+  margin: 2px 0 0 0;
+}
+
+.event-prize-total-pill {
+  font-family: var(--font-main);
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.event-prize-total-pill.expo-pill {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.event-prize-total-pill.reel-pill {
+  background: #f3e8ff;
+  color: #6b21a8;
+}
+
+.event-prize-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.prize-tier-item {
+  border-radius: 12px;
+  padding: 10px 14px;
+  border: 1px solid;
+}
+
+.tier-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.tier-label {
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.tier-val {
+  font-family: var(--font-main);
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.prize-tier-item small {
+  display: block;
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.3;
+}
+
+.gold-tier {
+  background: #fefce8;
+  border-color: #fde047;
+  color: #854d0e;
+}
+.gold-tier .tier-val { color: #b45309; }
+
+.silver-tier {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+  color: #0369a1;
+}
+.silver-tier .tier-val { color: #0284c7; }
+
+.bronze-tier {
+  background: #faf5ff;
+  border-color: #e9d5ff;
+  color: #6b21a8;
+}
+.bronze-tier .tier-val { color: #7e22ce; }
+
+.green-tier {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+.green-tier .tier-val { color: #059669; }
+
+.purple-tier {
+  background: #fdf4ff;
+  border-color: #f5d0fe;
+  color: #86198f;
+}
+.purple-tier .tier-val { color: #a21caf; }
+
+.btn-navy-card-sm {
+  width: 100%;
+  background: var(--primary-navy);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-navy-card-sm:hover {
+  background: #193f77;
+  transform: translateY(-2px);
+}
+
+/* Modal Summary Pool Chips */
+.prizes-modal-summary-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.summary-pool-chip {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+}
+
+.summary-pool-chip span {
+  display: block;
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.summary-pool-chip strong {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--primary-navy);
+}
+
+@media (max-width: 950px) {
+  .event-wise-prizes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================================================
+   6. MODAL BENTO PRIZES & EVENT POSTER SHOWCASE
+   ================================================== */
+.modal-section-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 22px 20px;
+  margin-bottom: 22px;
+}
+
+.modal-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.modal-section-heading h4 {
+  font-family: var(--font-main);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin: 0;
+}
+
+.heading-pill {
+  background: #0f2647;
+  color: #fbbf24;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+}
+
+.modal-bento-prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.modal-bento-prize-card {
+  border-radius: 16px;
+  padding: 16px;
+  border: 1.5px solid;
+  transition: transform 0.25s ease;
+}
+
+.modal-bento-prize-card:hover {
+  transform: translateY(-2px);
+}
+
+.modal-bento-rank {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.modal-bento-amount {
+  font-family: var(--font-main);
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.modal-bento-perk {
+  font-size: 0.8rem;
+  color: #475569;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Modal Bento Themes */
+.modal-prize-gold {
+  background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%);
+  border-color: #facc15;
+  color: #713f12;
+}
+.modal-prize-cyan {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  border-color: #38bdf8;
+  color: #0369a1;
+}
+.modal-prize-purple {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  border-color: #c084fc;
+  color: #581c87;
+}
+.modal-prize-emerald {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  border-color: #4ade80;
+  color: #14532d;
+}
+
+/* Modal Event Poster Showcase */
+.modal-poster-wrapper {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.modal-poster-preview-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  border: 2px solid #e2e8f0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.modal-poster-preview-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(255, 123, 37, 0.25);
+}
+
+.modal-poster-img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+}
+
+.poster-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 38, 71, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.modal-poster-preview-card:hover .poster-hover-overlay {
+  opacity: 1;
+}
+
+.zoom-pill {
+  background: #ffffff;
+  color: var(--primary-navy);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-poster-info h5 {
+  font-family: var(--font-main);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 8px;
+}
+
+.modal-poster-info p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.poster-action-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-navy-sm {
+  background: var(--primary-navy);
+  color: #ffffff;
+  font-size: 0.82rem;
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-navy-sm:hover {
+  background: #193f77;
+  transform: translateY(-2px);
+}
+
+.btn-outline-glow-sm {
+  background: #ffffff;
+  color: var(--primary-navy);
+  border: 1.5px solid #cbd5e1;
+  font-size: 0.82rem;
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-outline-glow-sm:hover {
+  border-color: #ff7b25;
+  color: #ff7b25;
+  transform: translateY(-2px);
+}
+
+/* Timeline & Convenors inside modal */
+.meta-pills-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.meta-pill {
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.rounds-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.round-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.round-step-number {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #ff7b25;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.round-step-content strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--primary-navy);
+  margin-bottom: 4px;
+}
+
+.round-step-content p {
+  font-size: 0.85rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.convenors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.convenor-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.convenor-name {
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: var(--primary-navy);
+}
+
+.convenor-phone {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #ff7b25;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.convenor-phone:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+  .modal-bento-prizes-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-poster-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .modal-poster-img {
+    height: 340px;
+  }
+  .convenors-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================================================
+   7. POSTER LIGHTBOX MODAL
+   ================================================== */
+.poster-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 10, 20, 0.88);
+  backdrop-filter: blur(12px);
+  z-index: 10005;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.poster-lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.poster-lightbox-container {
+  position: relative;
+  max-width: 720px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.92) translateY(20px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.poster-lightbox-overlay.active .poster-lightbox-container {
+  transform: scale(1) translateY(0);
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close-btn:hover {
+  background: #ff7b25;
+  transform: rotate(90deg);
+}
+
+.lightbox-poster-image {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-caption-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 14px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ==================================================
+   8. FRAMER-STYLE SPRING ANIMATIONS & SMOOTHNESS
+   ================================================== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px) scale(0.98);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Smooth Click Ripple / Spring physics for buttons */
+.btn {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, background 0.2s ease !important;
+}
+
+.btn:active {
+  transform: scale(0.96) !important;
+}
+
+.btn .arrow {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ==================================================
+   9. MOBILE EVENT CARDS SLIDING & STACKING ANIMATION
+   ================================================== */
+@media (max-width: 768px) {
+  .events-grid-three {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 36px !important;
+    position: relative !important;
+    padding-bottom: 60px !important;
+  }
+
+  .event-card {
+    position: sticky !important;
+    width: 100% !important;
+    transform-origin: top center !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, filter 0.4s ease, opacity 0.4s ease !important;
+    box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.09), 0 20px 45px rgba(0, 0, 0, 0.16) !important;
+    will-change: transform, filter, opacity;
+  }
+
+  /* Staggered sticky offsets and z-indexes: each card slides on top of the preceding one */
+  #card-quiz {
+    top: 86px !important;
+    z-index: 10 !important;
+  }
+
+  #card-expo {
+    top: 108px !important;
+    z-index: 20 !important;
+    margin-top: 10px;
+  }
+
+  #card-reel {
+    top: 130px !important;
+    z-index: 30 !important;
+    margin-top: 10px;
+  }
+
+  /* When card is slid over and stacked below */
+  .event-card.is-stacked {
+    transform: scale(0.95) translateY(-4px) !important;
+    filter: brightness(0.92) !important;
+    opacity: 0.85 !important;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05), 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+

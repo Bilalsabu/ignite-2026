@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Framer-style Ambient Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
 
   <!-- Header / Navigation -->
   <header class="site-header" id="header">
@@ -59,6 +61,11 @@
     <div class="container hero-container">
       <!-- Left Column: Typography & CTAs -->
       <div class="hero-left">
+        <!-- Official College Logo Banner -->
+        <div class="hero-college-brand">
+          <img src="assets/tkm-logo.png" alt="TKM Institute of Technology" class="hero-college-logo">
+        </div>
+
         <div class="presenter-tag">
           <span class="sparkle">&#10022;</span>
           <span>DEPARTMENT OF APPLIED SCIENCE AND ENGINEERING PRESENTS</span>
@@ -228,6 +235,53 @@
       </div>
     </div>
   </section>
+
+  <!-- Infinite Marquee Ticker: 1.3 Lakh Prize Pool -->
+  <div class="marquee-ticker-section" aria-label="IGNITE 2026 Festival Highlights">
+    <div class="marquee-ticker-track">
+      <div class="marquee-ticker-content">
+        <span class="marquee-badge glow-badge"><span class="badge-icon">🏆</span> ₹1.3 LAKH PRIZE POOL</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-text">3 EXCITING EVENTS</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-highlight">ZERO REGISTRATION FEE</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-text">ALL SCHOOLS INVITED</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-badge"><span class="badge-icon">🚀</span> EXPLORA 26 PROJECT EXPO</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-badge"><span class="badge-icon">🧠</span> QUIZ WHIZ V2.0</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-badge"><span class="badge-icon">🎬</span> REEL MAKING CONTEST</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-highlight">NOVEMBER 24, 2026</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-text">TKM INSTITUTE OF TECHNOLOGY</span>
+        <span class="marquee-star">&#10022;</span>
+      </div>
+      <!-- Cloned track for infinite seamless loop -->
+      <div class="marquee-ticker-content" aria-hidden="true">
+        <span class="marquee-badge glow-badge"><span class="badge-icon">🏆</span> ₹1.3 LAKH PRIZE POOL</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-text">3 EXCITING EVENTS</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-highlight">ZERO REGISTRATION FEE</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-text">ALL SCHOOLS INVITED</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-badge"><span class="badge-icon">🚀</span> EXPLORA 26 PROJECT EXPO</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-badge"><span class="badge-icon">🧠</span> QUIZ WHIZ V2.0</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-badge"><span class="badge-icon">🎬</span> REEL MAKING CONTEST</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-highlight">NOVEMBER 24, 2026</span>
+        <span class="marquee-star">&#10022;</span>
+        <span class="marquee-text">TKM INSTITUTE OF TECHNOLOGY</span>
+        <span class="marquee-star">&#10022;</span>
+      </div>
+    </div>
+  </div>
 
   <!-- About Section -->
   <section class="about-section" id="about">
@@ -484,54 +538,191 @@
         </div>
       </div>
 
-      <!-- 4 Prize Cards Grid matching the mockup palette -->
-      <div class="prize-cards-grid">
-        <!-- 1st Prize: Gold -->
-        <div class="prize-card prize-card-gold">
-          <div class="prize-trophy-icon">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34c3-.97 5-3.8 5-7.66V4H6v7c0 3.86 2 6.69 5 7.66z"></path></svg>
+      <!-- Highlighted Glowing Mega Grand Prize Card -->
+      <div class="grand-prize-mega-card reveal-on-scroll">
+        <div class="mega-card-glow-layer"></div>
+        <div class="mega-card-particles"></div>
+        <div class="mega-card-inner">
+          <div class="mega-top-pill">
+            <span class="live-pulse"></span>
+            <span>FLAGSHIP FESTIVAL REWARD • DIRECT CASH AWARDS</span>
           </div>
-          <span class="prize-rank">First Prize</span>
-          <div class="prize-amount">
-            <span class="currency">₹</span> 20,000
+          
+          <div class="mega-main-row">
+            <div class="mega-left-col">
+              <span class="mega-eyebrow">GRAND CHAMPIONSHIP PRIZE POOL</span>
+              <h3 class="mega-amount-title">
+                <span class="mega-currency">₹</span>1.3 <span class="mega-highlight">LAKH</span>
+              </h3>
+              <p class="mega-amount-words">₹1,30,000 Total Cash Awards &bull; Trophies &bull; Medals &bull; All School Students</p>
+            </div>
+            
+            <div class="mega-trophy-col">
+              <div class="mega-trophy-badge">
+                <span class="mega-trophy-emoji">🏆</span>
+                <div class="trophy-glow-halo"></div>
+              </div>
+            </div>
           </div>
-          <p class="prize-perk">Trophy &bull; Cash Award &bull; Certificate</p>
+
+          <div class="mega-perks-row">
+            <div class="mega-perk-item">
+              <span class="perk-icon">⚡</span>
+              <span><strong>100% Free:</strong> Zero Registration Fee for all School Teams</span>
+            </div>
+            <div class="mega-perk-item">
+              <span class="perk-icon">🏆</span>
+              <span><strong>Championship Trophies:</strong> Custom Rolling Cups & Mementos</span>
+            </div>
+            <div class="mega-perk-item">
+              <span class="perk-icon">🎖️</span>
+              <span><strong>Medals:</strong> Gold, Silver & Bronze Medallions</span>
+            </div>
+            <div class="mega-perk-item">
+              <span class="perk-icon">📜</span>
+              <span><strong>Accredited:</strong> Certificates of Excellence & Merit</span>
+            </div>
+          </div>
+
+          <!-- Button to View Event-wise Prize Pools -->
+          <div class="mega-card-action-bar">
+            <button class="btn btn-golden-glow" onclick="openAllPrizesModal()">
+              🏆 View Event-wise Prize Pools &rarr;
+            </button>
+            <a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold">
+              Register Free On Google Form &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event-wise Prize Breakdown Cards (Quiz Whiz, Explora 26, Reel Making) -->
+      <div class="event-wise-prizes-grid reveal-on-scroll">
+        <!-- Event 1: Quiz Whiz -->
+        <div class="event-prize-card event-prize-quiz">
+          <div class="event-prize-card-header">
+            <div class="event-prize-card-icon">🧠</div>
+            <div class="event-prize-header-text">
+              <span class="event-prize-tag">QUIZ COMPETITION</span>
+              <h4 class="event-prize-card-title">QUIZ WHIZ V2.0</h4>
+            </div>
+            <div class="event-prize-total-pill">₹50,000 Pool</div>
+          </div>
+          <div class="event-prize-card-body">
+            <div class="prize-tier-item gold-tier">
+              <div class="tier-top-row">
+                <span class="tier-label">🥇 1st Prize</span>
+                <span class="tier-val">₹ 25,000</span>
+              </div>
+              <small>Championship Rolling Trophy + Gold Medals</small>
+            </div>
+            <div class="prize-tier-item silver-tier">
+              <div class="tier-top-row">
+                <span class="tier-label">🥈 2nd Prize</span>
+                <span class="tier-val">₹ 15,000</span>
+              </div>
+              <small>Runner-Up Trophy + Silver Medals</small>
+            </div>
+            <div class="prize-tier-item bronze-tier">
+              <div class="tier-top-row">
+                <span class="tier-label">🥉 3rd Prize</span>
+                <span class="tier-val">₹ 10,000</span>
+              </div>
+              <small>Bronze Medallions + Merit Certificates</small>
+            </div>
+          </div>
+          <div class="event-prize-card-footer">
+            <button class="btn btn-navy-card-sm" onclick="openEventDetailsModal('quiz')">
+              View Quiz Details & Poster &rarr;
+            </button>
+          </div>
         </div>
 
-        <!-- 2nd Prize: Sky Blue -->
-        <div class="prize-card prize-card-blue">
-          <div class="prize-trophy-icon">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+        <!-- Event 2: Project Expo -->
+        <div class="event-prize-card event-prize-expo">
+          <div class="event-prize-card-header">
+            <div class="event-prize-card-icon">🚀</div>
+            <div class="event-prize-header-text">
+              <span class="event-prize-tag expo-tag">PROJECT EXPO</span>
+              <h4 class="event-prize-card-title">EXPLORA 26</h4>
+            </div>
+            <div class="event-prize-total-pill expo-pill">₹55,000 Pool</div>
           </div>
-          <span class="prize-rank">Second Prize</span>
-          <div class="prize-amount">
-            <span class="currency">₹</span> 15,000
+          <div class="event-prize-card-body">
+            <div class="prize-tier-item gold-tier">
+              <div class="tier-top-row">
+                <span class="tier-label">🥇 1st Prize</span>
+                <span class="tier-val">₹ 25,000</span>
+              </div>
+              <small>Championship Trophy + Gold Medals</small>
+            </div>
+            <div class="prize-tier-item silver-tier">
+              <div class="tier-top-row">
+                <span class="tier-label">🥈 2nd Prize</span>
+                <span class="tier-val">₹ 15,000</span>
+              </div>
+              <small>Runner-Up Cup + Silver Medals</small>
+            </div>
+            <div class="prize-tier-item bronze-tier">
+              <div class="tier-top-row">
+                <span class="tier-label">🥉 3rd Prize</span>
+                <span class="tier-val">₹ 10,000</span>
+              </div>
+              <small>Bronze Medallions + Merit Certificates</small>
+            </div>
+            <div class="prize-tier-item green-tier">
+              <div class="tier-top-row">
+                <span class="tier-label">⭐ 4th Prize</span>
+                <span class="tier-val">₹ 5,000</span>
+              </div>
+              <small>Special Expo Innovation Award</small>
+            </div>
           </div>
-          <p class="prize-perk">Medal &bull; Cash Award &bull; Certificate</p>
+          <div class="event-prize-card-footer">
+            <button class="btn btn-navy-card-sm" onclick="openEventDetailsModal('expo')">
+              View Expo Details & Poster &rarr;
+            </button>
+          </div>
         </div>
 
-        <!-- 3rd Prize: Pink / Purple -->
-        <div class="prize-card prize-card-pink">
-          <div class="prize-trophy-icon">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#a21caf" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+        <!-- Event 3: Reel Making -->
+        <div class="event-prize-card event-prize-reel">
+          <div class="event-prize-card-header">
+            <div class="event-prize-card-icon">🎬</div>
+            <div class="event-prize-header-text">
+              <span class="event-prize-tag reel-tag">VIDEO CONTEST</span>
+              <h4 class="event-prize-card-title">REEL MAKING</h4>
+            </div>
+            <div class="event-prize-total-pill reel-pill">₹25,000 Pool</div>
           </div>
-          <span class="prize-rank">Third Prize</span>
-          <div class="prize-amount">
-            <span class="currency">₹</span> 10,000
+          <div class="event-prize-card-body">
+            <div class="prize-tier-item gold-tier">
+              <div class="tier-top-row">
+                <span class="tier-label">🥇 1st Prize</span>
+                <span class="tier-val">₹ 15,000</span>
+              </div>
+              <small>Championship Trophy, Cash & Memento</small>
+            </div>
+            <div class="prize-tier-item silver-tier">
+              <div class="tier-top-row">
+                <span class="tier-label">🥈 2nd Prize</span>
+                <span class="tier-val">₹ 10,000</span>
+              </div>
+              <small>Runner-Up Trophy & Memento</small>
+            </div>
+            <div class="prize-tier-item purple-tier">
+              <div class="tier-top-row">
+                <span class="tier-label">🚫 Theme Merit</span>
+                <span class="tier-val">Special Honor</span>
+              </div>
+              <small>Antidrug Awareness Creative Citation</small>
+            </div>
           </div>
-          <p class="prize-perk">Medal &bull; Cash Award &bull; Certificate</p>
-        </div>
-
-        <!-- 4th Prize: Mint Green -->
-        <div class="prize-card prize-card-green">
-          <div class="prize-trophy-icon">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <div class="event-prize-card-footer">
+            <button class="btn btn-navy-card-sm" onclick="openEventDetailsModal('reel')">
+              View Reel Details & Poster &rarr;
+            </button>
           </div>
-          <span class="prize-rank">Fourth Prize</span>
-          <div class="prize-amount">
-            <span class="currency">₹</span> 5,000
-          </div>
-          <p class="prize-perk">(for Expo Innovation)</p>
         </div>
       </div>
 
@@ -905,6 +1096,154 @@
     <div class="modal-dialog modal-lg">
       <button class="modal-close-btn" onclick="closeModal('eventDetailsModal')" aria-label="Close dialog">&times;</button>
       <div class="modal-body-content" id="eventDetailsBody"></div>
+    </div>
+  </div>
+
+  <!-- ALL PRIZES MODAL (Event-wise Prize Pools Breakdown) -->
+  <div class="modal-overlay" id="allPrizesModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <button class="modal-close-btn" onclick="closeModal('allPrizesModal')" aria-label="Close dialog">&times;</button>
+      <div class="modal-body-content">
+        <div class="modal-details-container">
+          <!-- Modal Header -->
+          <div class="modal-details-header">
+            <div class="modal-details-icon" style="background: #fef08a;">
+              🏆
+            </div>
+            <div class="modal-details-title-box">
+              <span class="modal-event-type-badge">EVENT-WISE PRIZE POOLS</span>
+              <h3>Grand ₹1.30 Lakh Festival Rewards</h3>
+              <p class="modal-event-tagline">"Attractive cash prizes and championship honours across each competition."</p>
+            </div>
+          </div>
+
+          <!-- Total Summary Bar -->
+          <div class="prizes-modal-summary-bar">
+            <div class="summary-pool-chip">
+              <span>Grand Total</span>
+              <strong>₹ 1,30,000 Cash</strong>
+            </div>
+            <div class="summary-pool-chip">
+              <span>Events</span>
+              <strong>3 Competitions</strong>
+            </div>
+            <div class="summary-pool-chip">
+              <span>Registration</span>
+              <strong style="color: #059669;">Free for All</strong>
+            </div>
+          </div>
+
+          <!-- Event 1: Quiz Whiz Pool -->
+          <div class="modal-section-box">
+            <div class="modal-section-heading">
+              <span class="heading-pill" style="background: #0284c7; color: #ffffff;">🧠 QUIZ WHIZ V2.0</span>
+              <h4>Total Prize Pool: ₹ 50,000</h4>
+            </div>
+            <div class="modal-bento-prizes-grid">
+              <div class="modal-bento-prize-card modal-prize-gold">
+                <span class="modal-bento-rank">🥇 1st Prize</span>
+                <div class="modal-bento-amount">₹ 25,000</div>
+                <p class="modal-bento-perk">Championship Rolling Trophy & Gold Medals</p>
+              </div>
+              <div class="modal-bento-prize-card modal-prize-cyan">
+                <span class="modal-bento-rank">🥈 2nd Prize</span>
+                <div class="modal-bento-amount">₹ 15,000</div>
+                <p class="modal-bento-perk">Runner-Up Trophy & Silver Medallions</p>
+              </div>
+              <div class="modal-bento-prize-card modal-prize-purple">
+                <span class="modal-bento-rank">🥉 3rd Prize</span>
+                <div class="modal-bento-amount">₹ 10,000</div>
+                <p class="modal-bento-perk">Bronze Medallions & Merit Certificates</p>
+              </div>
+              <div class="modal-bento-prize-card modal-prize-emerald">
+                <span class="modal-bento-rank">🎖️ All Delegates</span>
+                <div class="modal-bento-amount">Certificates</div>
+                <p class="modal-bento-perk">Certificates of Excellence & Participation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2: Explora 26 Pool -->
+          <div class="modal-section-box">
+            <div class="modal-section-heading">
+              <span class="heading-pill" style="background: #059669; color: #ffffff;">🚀 EXPLORA 26 (PROJECT EXPO)</span>
+              <h4>Total Prize Pool: ₹ 55,000</h4>
+            </div>
+            <div class="modal-bento-prizes-grid">
+              <div class="modal-bento-prize-card modal-prize-gold">
+                <span class="modal-bento-rank">🥇 1st Prize</span>
+                <div class="modal-bento-amount">₹ 25,000</div>
+                <p class="modal-bento-perk">Championship Trophy & Gold Medals</p>
+              </div>
+              <div class="modal-bento-prize-card modal-prize-cyan">
+                <span class="modal-bento-rank">🥈 2nd Prize</span>
+                <div class="modal-bento-amount">₹ 15,000</div>
+                <p class="modal-bento-perk">Runner-Up Cup & Silver Medallions</p>
+              </div>
+              <div class="modal-bento-prize-card modal-prize-purple">
+                <span class="modal-bento-rank">🥉 3rd Prize</span>
+                <div class="modal-bento-amount">₹ 10,000</div>
+                <p class="modal-bento-perk">Bronze Medallions & Merit Certificates</p>
+              </div>
+              <div class="modal-bento-prize-card modal-prize-emerald">
+                <span class="modal-bento-rank">⭐ 4th Prize</span>
+                <div class="modal-bento-amount">₹ 5,000</div>
+                <p class="modal-bento-perk">Special Expo Innovation Prototype Award</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3: Reel Making Pool -->
+          <div class="modal-section-box">
+            <div class="modal-section-heading">
+              <span class="heading-pill" style="background: #7e22ce; color: #ffffff;">🎬 REEL MAKING COMPETITION</span>
+              <h4>Total Prize Pool: ₹ 25,000</h4>
+            </div>
+            <div class="modal-bento-prizes-grid">
+              <div class="modal-bento-prize-card modal-prize-gold">
+                <span class="modal-bento-rank">🥇 1st Prize</span>
+                <div class="modal-bento-amount">₹ 15,000</div>
+                <p class="modal-bento-perk">Championship Trophy, Cash & Memento</p>
+              </div>
+              <div class="modal-bento-prize-card modal-prize-cyan">
+                <span class="modal-bento-rank">🥈 2nd Prize</span>
+                <div class="modal-bento-amount">₹ 10,000</div>
+                <p class="modal-bento-perk">Runner-Up Trophy & Memento</p>
+              </div>
+              <div class="modal-bento-prize-card modal-prize-purple">
+                <span class="modal-bento-rank">🚫 Theme Citation</span>
+                <div class="modal-bento-amount">Special Honor</div>
+                <p class="modal-bento-perk">Antidrug Awareness Creative Citation</p>
+              </div>
+              <div class="modal-bento-prize-card modal-prize-emerald">
+                <span class="modal-bento-rank">🎖️ All Creators</span>
+                <div class="modal-bento-amount">State Certificates</div>
+                <p class="modal-bento-perk">Official TKMIT Certificate of Honor</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Bottom Actions -->
+          <div class="details-action-bar">
+            <button class="btn btn-navy-card" onclick="closeModal('allPrizesModal')">Close</button>
+            <a href="https://forms.gle/A7SG6154X9wK2URp9" target="_blank" rel="noopener noreferrer" class="btn btn-orange-card">
+              Register Free On Google Form &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POSTER LIGHTBOX PREVIEW MODAL -->
+  <div class="poster-lightbox-overlay" id="posterLightboxModal" aria-hidden="true" onclick="closePosterLightbox(event)">
+    <div class="poster-lightbox-container" onclick="event.stopPropagation()">
+      <button class="lightbox-close-btn" onclick="closePosterLightbox()" aria-label="Close poster preview">&times;</button>
+      <img src="" alt="Enlarged Official Event Poster" id="lightboxPosterImg" class="lightbox-poster-image">
+      <div class="lightbox-caption-bar">
+        <span id="lightboxPosterTitle">Official Event Poster</span>
+        <a href="#" download id="lightboxDownloadBtn" class="btn btn-navy-sm">📥 Download High-Res</a>
+      </div>
     </div>
   </div>
 
