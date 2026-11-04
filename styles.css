@@ -1169,6 +1169,61 @@ section {
   font-weight: 800;
 }
 
+/* Event Eligibility Badges */
+.event-eligibility-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.4px;
+  margin: 4px auto 8px auto;
+  text-transform: uppercase;
+}
+
+.event-eligibility-badge.quiz-eligibility {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.event-eligibility-badge.expo-eligibility {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.event-eligibility-badge.reel-eligibility {
+  background: #fae8ff;
+  color: #7e22ce;
+  border: 1px solid #f0abfc;
+}
+
+/* Distinctive colored bento bits for eligibility */
+.bento-bit.bit-highlight-blue {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+  font-weight: 800;
+}
+
+.bento-bit.bit-highlight-green {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
+  font-weight: 800;
+}
+
+.bento-bit.bit-highlight-purple {
+  background: #faf5ff;
+  color: #7e22ce;
+  border-color: #e9d5ff;
+  font-weight: 800;
+}
+
 .event-card-actions {
   display: flex;
   gap: 10px;
@@ -2939,23 +2994,23 @@ section {
 
 .mega-amount-title {
   font-family: var(--font-main);
-  font-size: 4rem;
-  font-weight: 900;
-  line-height: 1;
+  font-size: clamp(3.6rem, 7.5vw, 5.8rem);
+  font-weight: 950;
+  line-height: 1.05;
   color: #ffffff;
-  letter-spacing: -1px;
-  margin-bottom: 10px;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7), 0 0 35px rgba(245, 158, 11, 0.4);
 }
 
 .mega-currency {
-  font-size: 2.8rem;
+  font-size: clamp(2.5rem, 5.2vw, 4rem);
   background: linear-gradient(135deg, #fffbeb 0%, #fbbf24 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   vertical-align: top;
-  margin-right: 4px;
-  filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.75));
+  margin-right: 6px;
+  filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.85));
 }
 
 .mega-highlight {
@@ -3097,7 +3152,10 @@ section {
 
 @media (max-width: 900px) {
   .mega-amount-title {
-    font-size: 2.8rem;
+    font-size: 3.6rem;
+  }
+  .mega-currency {
+    font-size: 2.5rem;
   }
   .mega-perks-row {
     grid-template-columns: 1fr 1fr;
@@ -3121,7 +3179,10 @@ section {
     align-items: flex-start;
   }
   .mega-amount-title {
-    font-size: 2.3rem;
+    font-size: 2.9rem;
+  }
+  .mega-currency {
+    font-size: 2rem;
   }
   .mega-perks-row {
     grid-template-columns: 1fr;
@@ -3591,6 +3652,13 @@ section {
   padding: 8px 14px;
   font-size: 0.85rem;
   color: #334155;
+}
+
+.meta-pill.meta-pill-highlight {
+  background: #fef3c7;
+  border: 1.5px solid #fde68a;
+  color: #92400e;
+  font-weight: 700;
 }
 
 .rounds-timeline {

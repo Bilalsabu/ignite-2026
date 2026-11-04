@@ -14,7 +14,7 @@ const EVENT_DETAILS = {
     colorClass: 'quiz',
     poster: 'assets/poster-quiz.png',
     tagline: 'A Quiz Challenge for the Brightest Young Science Minds!',
-    eligibility: 'Open to High School and Higher Secondary students across all schools. Zero registration fee.',
+    eligibility: 'Higher Secondary students only (Plus One & Plus Two / Grades 11–12). Zero registration fee.',
     teamStructure: 'Strictly 2 members per team.',
     bentoPrizes: [
       { rank: '🥇 FIRST PRIZE', amount: '₹ 25,000', perk: 'Cash Award, Championship Trophy & Gold Medals', style: 'gold' },
@@ -37,6 +37,8 @@ const EVENT_DETAILS = {
       }
     ],
     rules: [
+      'Eligibility: Strictly for Higher Secondary school students (Plus One & Plus Two / Grades 11–12).',
+      'Strictly 2 members per team from the same school.',
       'No electronic gadgets, mobile phones, or smartwatches are permitted in the competition hall.',
       'Quizmaster\'s decision is final and binding on all matters.',
       'Last date for registration: 22/11/2026. Event Date: November 24, 2026 at TKMIT Campus.'
@@ -49,7 +51,7 @@ const EVENT_DETAILS = {
     colorClass: 'expo',
     poster: 'assets/poster-expo.png',
     tagline: 'Innovate • Create • Collaborate • Showcase Ideas Today, Solutions Tomorrow.',
-    eligibility: 'High School and Higher Secondary students. Teams present working hardware models, science prototypes, or software demonstrators.',
+    eligibility: 'Open to High School and Higher Secondary students (Grades 8–12). Teams present working hardware models, science prototypes, or software demonstrators.',
     teamStructure: '2 to 4 members per team.',
     bentoPrizes: [
       { rank: '🥇 FIRST PRIZE', amount: '₹ 25,000', perk: 'Grand Cash Award, Championship Cup & Gold Medals', style: 'gold' },
@@ -72,6 +74,7 @@ const EVENT_DETAILS = {
       }
     ],
     rules: [
+      'Eligibility: Open to both High School (Grades 8–10) and Higher Secondary (Grades 11–12) students.',
       'Working models must be safe and comply with lab guidelines. Hazardous chemicals or open flames are prohibited.',
       'Participants requiring continuous 230V AC power must specify during registration.',
       'All team members must be present during the jury evaluation.',
@@ -85,7 +88,7 @@ const EVENT_DETAILS = {
     colorClass: 'reel',
     poster: 'assets/poster-reel.png',
     tagline: '“ Exciting Cash Prizes Await the Winners ” — Topic: Antidrug Awareness',
-    eligibility: 'High School and Higher Secondary students. Open to both individuals and groups.',
+    eligibility: 'Higher Secondary students only (Plus One & Plus Two / Grades 11–12). Open to both individuals and groups.',
     teamStructure: 'Individual or Group.',
     bentoPrizes: [
       { rank: '🥇 FIRST PRIZE', amount: 'Rs 15,000', perk: 'Championship Trophy, Cash Award & Memento', style: 'gold' },
@@ -94,6 +97,7 @@ const EVENT_DETAILS = {
       { rank: '🎖️ ALL CREATORS', amount: 'State Certificate', perk: 'Official TKMIT Certificate of Honor', style: 'emerald' }
     ],
     instructions: [
+      'Eligibility: Strictly for Higher Secondary school students (Plus One & Plus Two).',
       'Reels should be based on given theme: "Antidrug Awareness".',
       'Duration strictly 1 minute (60 seconds).',
       'Music, voice over and text can be added creatively.',
@@ -112,6 +116,7 @@ const EVENT_DETAILS = {
       }
     ],
     rules: [
+      'Eligibility: Exclusively for Higher Secondary school students (Plus One & Plus Two).',
       'Content must be 100% original, shot on-site at TKMIT campus.',
       'Standard 9:16 vertical format (1080x1920) recommended.',
       'Last date for registration: 22/11/2026. Event Date: November 24, 2026.'
@@ -360,7 +365,7 @@ function openEventDetailsModal(eventType) {
       <div class="details-section-block">
         <h4>Eligibility & Team Composition</h4>
         <div class="meta-pills-row">
-          <div class="meta-pill"><strong>Eligibility:</strong> ${data.eligibility}</div>
+          <div class="meta-pill meta-pill-highlight"><strong>Eligibility:</strong> ${data.eligibility}</div>
           <div class="meta-pill"><strong>Team Size:</strong> ${data.teamStructure}</div>
         </div>
       </div>
