@@ -2600,8 +2600,8 @@ section {
   }
 
   .campus-logo-box {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
   }
 
   .campus-logo-meta .campus-logo-title {
@@ -2960,14 +2960,31 @@ section {
 
 @media (max-width: 768px) {
   .hero-college-brand {
+    display: flex;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     width: 100%;
   }
   .hero-college-logo {
     height: auto;
-    max-height: 56px;
-    max-width: 90vw;
+    width: auto;
+    max-width: min(92vw, 420px);
+    max-height: 125px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-college-brand {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+    width: 100%;
+  }
+  .hero-college-logo {
+    height: auto;
+    width: auto;
+    max-width: min(94vw, 360px);
+    max-height: 110px;
   }
 }
 
