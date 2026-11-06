@@ -2944,8 +2944,9 @@ section {
 }
 
 .hero-college-logo {
-  height: 52px;
-  max-width: 440px;
+  height: auto;
+  max-height: 80px;
+  max-width: 480px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.5));
@@ -2964,7 +2965,8 @@ section {
     width: 100%;
   }
   .hero-college-logo {
-    height: 42px;
+    height: auto;
+    max-height: 56px;
     max-width: 90vw;
   }
 }
